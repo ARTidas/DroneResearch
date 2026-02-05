@@ -1,0 +1,234 @@
+﻿Age,Age group,responder_postal_code,geo_responder_settlement_type,Residence,geo_responder_settlement_latitude,geo_responder_settlement_longitude,Gender,Education,Familiarity,Familiarity group,S1,S2,S3,S4,O1,O2,O3,O4,W1,W2,W3,W4,T1,T2,T3,SO_Attitude,WT_Attitude,T4
+20,Younger,3573,község,Rural,48.036,20.8892,Nő,Érettségi (középiskola),2,Less,3,4,5,3,4,4,2,4,3,1,2,3,3,3,3,3.625,2.625,3
+20,Younger,2120,város,Urban,47.6328,19.1412,Nő,Érettségi (középiskola),2,Less,2,4,1,4,3,2,4,3,5,3,4,4,5,4,3,2.875,4.125,5
+37,Younger,3980,város,Urban,48.3967,21.6557,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,5,5,5,5,4,3,5,4,4,3,5,4,4,5,4.375,4.25,5
+22,Younger,4466,község,Rural,48.1565,21.4635,Férfi,Érettségi (középiskola),3,More,3,4,4,4,4,3,4,3,3,2,3,3,3,2,2,3.625,2.5,2
+18,Younger,2300,város,Urban,47.1583,18.9448,Férfi,Érettségi (középiskola),3,More,4,5,5,5,5,5,5,4,3,3,1,3,5,3,4,4.75,3.25,4
+21,Younger,1039,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,1,1,5,1,2,4,4,4,2,2,5,1,4,5,2.875,3.25,3
+19,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,4,5,5,5,5,5,5,5,1,1,3,3,1,3,4,4.875,2.125,1
+19,Younger,3530,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Férfi,Érettségi (középiskola),3,More,4,5,5,5,4,3,3,5,3,2,3,1,4,1,4,4.25,2.375,1
+47,Older,6000,megyeszékhely megyei jogú város,Urban,46.9088,19.6928,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,5,5,5,5,5,5,4,5,3,1,1,5,5,2,5,4.875,3,2
+20,Younger,9400,megyei jogú város,Urban,47.6835,16.5798,Férfi,Érettségi (középiskola),4,More,3,5,5,5,5,5,3,5,2,1,2,2,2,2,3,4.5,1.875,1
+22,Younger,2500,megyei jogú város,Urban,47.7893,18.7437,Férfi,Érettségi (középiskola),3,More,2,4,5,3,5,5,4,4,5,2,3,5,5,5,4,4,4.25,5
+48,Older,4461,város,Urban,48.0425,21.3503,Férfi,"Tudományos fokozat (PhD, DLA)",2,Less,5,5,5,5,5,5,5,5,1,1,1,1,5,5,4,5,2.625,3
+81,Older,1156,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,3,3,5,4,3,3,3,3,2,2,1,3,2,2,4,3.375,2.375,3
+51,Older,2600,város,Urban,47.7838,19.1348,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,4,5,5,4,5,5,1,5,1,3,2,3,4,4,5,4.25,3.25,4
+24,Younger,4465,város,Urban,48.1238,21.4677,Nő,Érettségi (középiskola),2,Less,4,4,5,5,4,4,4,4,3,2,3,4,2,1,4,4.25,2.625,2
+37,Younger,8831,község,Rural,46.3702,17.004,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,4,5,5,5,5,5,5,5,2,1,1,3,2,3,3,4.875,2.375,4
+51,Older,9222,nagyközség,Rural,47.9143,17.1557,Férfi,Érettségi (középiskola),4,More,3,5,5,5,5,5,3,4,2,1,1,5,3,1,3,4.375,2.125,1
+40,Older,2840,város,Urban,47.4867,18.3153,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,5,4,5,4,5,3,4,5,2,2,1,4,2,4,3,4.375,2.375,1
+55,Older,1164,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),4,More,5,5,5,5,5,5,5,5,1,1,1,1,1,1,1,5,1.25,3
+29,Younger,1215,főváros,Urban,47.4825,19.1593,Nő,"Tudományos fokozat (PhD, DLA)",4,More,2,5,5,4,5,4,3,4,2,2,3,2,1,3,2,4,2.25,3
+64,Older,1185,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),4,More,4,3,5,5,5,4,5,4,4,2,1,2,1,4,5,4.375,2.875,4
+20,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,3,5,5,4,5,5,3,5,2,2,3,3,3,2,4,4.375,2.75,3
+20,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,3,5,5,4,2,4,3,4,3,3,4,3,5,3,3,3.75,3.375,3
+24,Younger,3903,község,Rural,48.152,21.1735,Férfi,Érettségi (középiskola),3,More,3,5,5,3,4,5,2,1,3,2,2,3,3,2,1,3.5,2.25,2
+19,Younger,3434,község,Rural,48.016,20.824,Nő,Érettségi (középiskola),3,More,3,2,4,2,4,3,2,3,3,3,3,4,4,2,3,2.875,3.125,3
+18,Younger,2400,megyei jogú város,Urban,46.9672,18.9355,Férfi,Érettségi (középiskola),3,More,3,4,5,3,4,3,1,4,3,2,4,2,2,1,4,3.375,2.875,5
+21,Younger,3600,város,Urban,48.2217,20.2943,Nő,Érettségi (középiskola),4,More,2,3,4,4,4,3,4,4,3,3,3,4,3,2,1,3.5,2.625,2
+22,Younger,1182,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,3,4,5,5,5,5,4,4,4,3,3,1,2,2,1,4.375,2.25,2
+21,Younger,3600,város,Urban,48.2217,20.2943,Férfi,Érettségi (középiskola),3,More,3,3,3,1,3,4,1,2,2,2,3,2,2,5,4,2.5,3,4
+20,Younger,3927,község,Rural,48.0485,21.3388,Nő,Érettségi (középiskola),2,Less,4,5,5,3,3,3,3,4,3,3,3,2,2,2,4,3.75,2.625,2
+20,Younger,3980,város,Urban,48.3967,21.6557,Nő,Érettségi (középiskola),2,Less,3,4,3,4,4,3,4,3,4,2,2,2,3,3,3,3.5,2.75,3
+21,Younger,3527,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Nő,Érettségi (középiskola),2,Less,2,4,4,4,3,4,2,4,2,1,5,5,5,5,5,3.375,4.125,5
+19,Younger,3780,"község,város",Rural,48.3251,20.7883,Nő,Érettségi (középiskola),3,More,3,4,4,3,3,4,3,3,3,3,4,3,2,5,4,3.375,3.375,3
+21,Younger,3394,község,Rural,47.8738,20.3255,Férfi,Érettségi (középiskola),3,More,5,4,5,5,5,4,4,4,4,3,3,4,4,2,3,4.5,3.25,3
+22,Younger,3580,város,Urban,47.9302,21.0515,Férfi,Szakiskola / Szakmunkásképző,4,More,4,4,5,5,5,5,1,5,1,2,3,3,3,4,4,4.25,2.625,1
+22,Younger,4465,város,Urban,48.1238,21.4677,Nő,Érettségi (középiskola),2,Less,4,3,5,5,4,3,2,4,3,3,3,2,2,2,4,3.75,2.625,2
+19,Younger,4467,község,Rural,48.1743,21.4965,Férfi,Érettségi (középiskola),4,More,3,3,4,4,4,4,3,3,3,3,2,2,1,1,1,3.5,2.125,4
+22,Younger,2100,város,Urban,47.601,19.3562,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,5,3,4,4,5,3,5,3,2,4,4,4,4,4,4,3.625,4
+21,Younger,3100,megyeszékhely megyei jogú város,Urban,48.111,19.8147,Nő,Érettségi (középiskola),2,Less,3,4,5,2,4,3,4,4,3,3,3,2,4,4,3,3.625,3.125,3
+34,Younger,8473,község,Rural,47.0437,17.3282,Férfi,Szakiskola / Szakmunkásképző,4,More,4,5,5,5,4,5,4,4,3,3,2,3,3,3,3,4.5,2.875,3
+21,Younger,3780,"község,város",Rural,48.3251,20.7883,Férfi,Érettségi (középiskola),2,Less,2,3,5,5,5,5,5,5,3,1,1,5,3,5,3,4.375,3,3
+20,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,4,5,4,3,4,5,4,5,2,2,2,2,5,2,2,4.25,2.75,5
+20,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,2,4,4,4,3,4,1,3,5,1,5,4,5,3,5,3.125,4,4
+29,Younger,2336,város,Urban,47.2795,19.0685,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,5,5,3,4,4,4,4,4,5,5,4,3,3,4,4,4,4
+25,Younger,3860,város,Urban,48.3312,21.1195,Nő,Érettségi (középiskola),1,Less,3,3,4,2,3,2,3,2,3,3,3,3,1,2,2,2.75,2.375,2
+25,Younger,3910,város,Urban,48.1125,21.4125,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,5,4,3,4,4,4,3,4,5,5,5,4,4,4.25,4
+20,Younger,3534,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Férfi,Érettségi (középiskola),1,Less,2,2,3,3,3,3,2,3,2,3,3,3,5,3,3,2.625,3.125,3
+24,Younger,3950,város,Urban,48.395,21.6563,Férfi,Érettségi (középiskola),2,Less,3,3,3,2,4,4,1,2,4,1,3,2,5,3,4,2.75,3.25,4
+23,Younger,3565,nagyközség,Rural,48.0352,21.0658,Nő,Érettségi (középiskola),2,Less,4,4,5,5,5,5,4,5,2,2,3,2,4,1,4,4.625,2.5,2
+21,Younger,3974,"község,nagyközség",Rural,48.3382,21.9722,Férfi,Érettségi (középiskola),2,Less,3,5,5,5,2,4,2,4,1,2,2,2,5,3,5,3.75,3.125,5
+20,Younger,3573,község,Rural,48.036,20.8892,Nő,Érettségi (középiskola),2,Less,4,4,5,5,5,3,3,4,2,2,2,2,4,1,1,4.125,2,2
+30,Younger,7400,"község,megyeszékhely megyei jogú város",Rural,46.335,17.7979,Férfi,Érettségi (középiskola),4,More,3,4,5,3,4,4,3,4,3,3,3,4,3,3,3,3.75,3,2
+20,Younger,3900,város,Urban,48.1627,21.1987,Férfi,Szakiskola / Szakmunkásképző,3,More,4,4,5,5,4,5,3,5,3,1,2,2,3,3,2,4.375,2.25,2
+28,Younger,2645,község,Rural,48.007,19.0928,Férfi,Érettségi (középiskola),4,More,3,4,5,3,3,5,4,3,1,1,2,2,2,2,3,3.75,1.875,2
+22,Younger,3934,község,Rural,48.2842,21.4503,Nő,Érettségi (középiskola),2,Less,5,5,5,3,5,5,5,5,3,2,2,2,4,5,4,4.75,3.375,5
+57,Older,3529,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,4,4,5,5,5,4,2,4,4,4,4,4,4.375,3.875,5
+46,Older,3881,"község,város",Rural,48.3068,21.2757,Férfi,Érettségi (középiskola),4,More,4,4,5,5,4,4,4,5,4,2,2,4,3,2,3,4.375,2.75,2
+44,Older,3900,város,Urban,48.1627,21.1987,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,4,3,4,4,5,4,3,4,3,3,4,5,5,4,5,3.875,4.25,5
+30,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,4,4,4,4,3,4,2,2,2,3,3,2,3,3,3,3.375,2.75,3
+35,Younger,3534,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Férfi,Érettségi (középiskola),3,More,5,5,5,5,5,5,5,5,3,2,2,4,1,2,3,5,2.375,2
+35,Younger,3980,város,Urban,48.3967,21.6557,Férfi,Érettségi (középiskola),2,Less,4,5,5,5,5,5,3,4,3,1,2,3,2,2,2,4.5,2.125,2
+27,Younger,4464,község,Rural,48.034,21.4587,Nő,Érettségi (középiskola),2,Less,1,2,3,1,3,3,2,3,5,2,4,3,5,3,2,2.25,3.25,2
+48,Older,5931,nagyközség,Rural,46.6718,20.6748,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,5,5,5,5,5,5,5,5,1,1,1,1,1,1,3,5,1.75,5
+19,Younger,2200,város,Urban,47.35,19.4477,Nő,Érettségi (középiskola),3,More,3,4,5,4,4,5,3,4,1,1,2,3,4,3,3,4,2.625,4
+25,Younger,1144,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,3,3,5,4,4,4,3,4,1,3,1,3,2,3,4,3.75,2.5,3
+19,Younger,4431,község,Rural,47.8778,21.5793,Férfi,Érettségi (középiskola),2,Less,2,4,5,4,4,5,1,3,3,1,3,3,5,4,4,3.5,3.25,3
+20,Younger,8947,község,Rural,46.6908,16.761,Férfi,Érettségi (középiskola),4,More,3,4,5,5,3,4,3,4,3,2,2,2,3,3,3,3.875,2.625,3
+33,Younger,4400,megyeszékhely megyei jogú város,Urban,48.1242,21.4723,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,1,4,4,3,5,3,4,3,1,3,3,5,3,5,3.375,3.25,3
+55,Older,4400,megyeszékhely megyei jogú város,Urban,48.1242,21.4723,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,5,5,4,4,3,5,3,3,4,2,4,2,3,4,2.75,1
+71,Older,4400,megyeszékhely megyei jogú város,Urban,48.1242,21.4723,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,4,4,5,3,3,5,1,2,2,1,2,2,5,4,2.25,3
+52,Older,8000,megyeszékhely megyei jogú város,Urban,47.2908,18.3265,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,5,5,5,5,5,3,5,1,1,1,1,3,2,3,4.5,1.625,1
+54,Older,4551,község,Rural,47.8778,21.5793,Nő,Érettségi (középiskola),2,Less,4,4,5,5,4,5,1,5,2,2,3,1,1,2,3,4.125,2.25,4
+49,Older,3529,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,5,5,5,4,5,3,1,1,3,2,1,2,5,5,4,3,5
+60,Older,1083,főváros,Urban,47.4825,19.1593,Férfi,Szakiskola / Szakmunkásképző,2,Less,5,3,5,5,3,2,3,4,2,1,1,2,3,3,3,3.75,2.25,3
+45,Older,1126,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,5,5,5,5,4,4,3,4,1,1,2,2,2,2,2,4.375,1.75,2
+48,Older,2457,város,Urban,47.123,18.8645,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,5,5,5,5,3,5,3,4,3,2,4,3,4,1,3,4.375,2.75,2
+45,Older,1081,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,5,4,5,4,5,4,4,4,4,4,5,5,4.5,4.375,5
+40,Older,1183,főváros,Urban,47.4825,19.1593,Férfi,"Tudományos fokozat (PhD, DLA)",3,More,4,5,5,4,4,4,4,4,4,4,4,4,4,4,5,4.25,4.25,5
+53,Older,2091,nagyközség,Rural,47.4462,18.7502,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,2,5,5,4,3,3,5,3,1,2,2,3,2,4,3.875,2.625,4
+53,Older,4028,megyeszékhely megyei jogú város,Urban,47.5288,21.6372,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,5,4,2,4,2,4,1,3,2,2,2,2,4,3.375,2.375,3
+49,Older,1039,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,5,4,4,4,5,1,3,4,4,4,4,4,4.375,3.5,4
+30,Younger,1022,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,4,3,5,4,3,3,1,2,3,2,4,2,4,4,4,3.125,3.375,4
+51,Older,4524,város,Urban,48.1792,22.0543,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,2,3,2,2,2,2,2,2,1,2,1,2,2,2,2.125,1.75,2
+34,Younger,1145,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,4,5,4,5,3,3,5,1,1,5,2,5,2,5,3.875,3.125,4
+47,Older,4400,megyeszékhely megyei jogú város,Urban,48.1242,21.4723,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,3,3,3,4,3,3,3,3,3,3,3,3,3,3.125,3,3
+46,Older,8220,város,Urban,47.0312,18.012,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,5,4,5,4,4,4,3,3,3,5,3,4,4.375,3.75,5
+18,Younger,4400,megyeszékhely megyei jogú város,Urban,48.1242,21.4723,Férfi,Általános iskola,3,More,2,5,3,4,5,5,3,5,1,1,5,5,5,5,5,4,4,5
+65,Older,2030,megyei jogú város,Urban,47.3955,18.9103,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,5,3,4,3,4,2,3,1,2,3,3,4,4,2.75,4
+18,Younger,4400,megyeszékhely megyei jogú város,Urban,48.1242,21.4723,Férfi,Általános iskola,2,Less,3,3,5,5,4,3,1,5,1,1,3,1,3,2,2,3.625,1.875,2
+32,Younger,3531,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,5,5,3,5,3,3,4,2,1,4,2,2,2,5,4,2.875,5
+40,Older,1012,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,5,5,5,5,5,5,4,4,1,1,1,1,3,1,4,4.75,1.625,1
+58,Older,1203,főváros,Urban,47.4825,19.1593,Férfi,"Tudományos fokozat (PhD, DLA)",4,More,3,4,5,4,4,4,1,4,2,2,3,2,2,2,3,3.625,2.125,1
+60,Older,1112,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,5,5,5,4,5,5,3,3,2,4,2,5,5,5,4.25,3.875,5
+59,Older,1112,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,5,3,4,3,3,3,4,3,3,5,5,5,5,3.375,4.375,5
+30,Younger,1145,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,2,4,3,2,2,3,1,2,5,4,5,5,5,1,3,2.375,3.875,3
+32,Younger,2481,város,Urban,47.2387,18.6547,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,3,5,4,1,1,4,3,4,3,5,4,5,3.375,3.875,3
+49,Older,3980,város,Urban,48.3967,21.6557,Férfi,Szakiskola / Szakmunkásképző,3,More,4,3,4,3,4,4,4,4,3,1,3,4,2,4,4,3.75,3.125,4
+44,Older,4400,megyeszékhely megyei jogú város,Urban,48.1242,21.4723,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",1,Less,5,5,4,4,3,3,3,3,5,3,4,3,4,2,2,3.75,3.125,2
+67,Older,1144,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,4,4,4,4,5,2,2,3,2,2,3,3,4.25,2.375,2
+59,Older,5094,község,Rural,47.0243,20.1427,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,3,4,4,3,4,3,4,2,2,3,2,2,3,2,3.625,2.25,2
+52,Older,1221,főváros,Urban,47.4825,19.1593,Férfi,Szakiskola / Szakmunkásképző,2,Less,2,2,5,3,3,5,1,3,3,2,1,2,3,1,3,3,2.25,3
+59,Older,4300,város,Urban,47.8372,22.1295,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,5,5,5,4,5,5,5,3,3,4,2,1,2,4,4.875,3,5
+43,Older,7761,"község,város",Rural,46.028,18.3329,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,3,5,5,5,5,5,2,4,2,3,2,4,2,4,4,4.25,3.125,4
+43,Older,1134,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,4,4,5,4,4,5,4,5,5,5,5,5,4.25,4.875,5
+33,Younger,3980,város,Urban,48.3967,21.6557,Nő,Érettségi (középiskola),2,Less,5,5,5,4,5,4,1,5,2,1,1,2,2,3,3,4.25,2.125,3
+43,Older,3980,város,Urban,48.3967,21.6557,Férfi,Érettségi (középiskola),2,Less,3,3,5,4,4,5,4,4,4,3,4,4,3,4,3,4,3.625,4
+49,Older,1148,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),3,More,5,5,5,5,5,5,3,5,5,1,5,5,3,5,5,4.75,4.25,5
+67,Older,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,4,5,5,3,5,4,5,5,2,5,1,1,1,2,3,4.5,2.5,5
+40,Older,1027,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,2,2,3,4,3,3,3,4,3,3,2,1,2,3,2.875,2.5,2
+32,Younger,4405,község,Rural,47.8778,21.5793,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,1,4,5,5,4,4,2,4,4,3,3,3,4,4,5,3.625,3.875,5
+28,Younger,2071,község,Rural,47.5165,18.8282,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,3,5,5,5,5,5,5,3,2,3,3,1,3,4,4.5,2.75,3
+50,Older,1164,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,5,5,5,5,5,5,5,3,3,3,5,4,3,3,5,3.625,5
+36,Younger,4271,község,Rural,47.4408,21.6373,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,3,4,3,3,5,3,3,3,4,2,2,2,4,3,3.25,2.875,3
+39,Older,1115,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,5,4,4,5,5,3,2,4,3,3,5,5,4.5,3.625,4
+36,Younger,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,5,3,4,4,3,2,5,2,2,4,3,3,3,2,3.75,2.625,2
+38,Younger,2028,község,Rural,47.7843,18.8757,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,5,4,4,4,4,3,3,3,2,3,3,2,2,3,3.75,2.75,4
+47,Older,1144,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,4,4,4,5,5,4,3,4,2,2,2,2,3,3,4,2.75,4
+47,Older,1144,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,4,4,3,3,3,3,3,2,3,3,4,3,4,3.25,3.25,4
+49,Older,1085,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,5,5,5,5,5,4,4,2,3,4,3,3,4,5,4.5,3.625,5
+65,Older,7500,város,Urban,46.2282,17.3633,Férfi,Érettségi (középiskola),3,More,1,3,5,5,4,5,4,5,4,3,3,2,4,3,4,4,3.375,4
+49,Older,2755,község,Rural,47.0015,19.922,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,5,5,5,5,3,5,5,1,1,2,1,2,1,3,4.75,1.625,2
+46,Older,1107,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,4,4,4,4,5,4,4,3,3,4,3,5,4,4,4,3.875,5
+46,Older,8220,város,Urban,47.0312,18.012,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,2,2,4,4,4,3,2,3,2,2,2,2,2,2,2,3,2,2
+42,Older,1117,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),2,Less,3,4,4,5,4,4,4,4,4,2,3,4,3,3,3,4,3.125,3
+41,Older,2642,község,Rural,47.905,19.051,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,4,5,5,4,5,5,1,4,2,2,3,2,4,5,5,4.125,3.375,4
+55,Older,3915,község,Rural,48.1317,21.3445,Nő,Szakiskola / Szakmunkásképző,2,Less,2,4,3,1,1,1,3,3,3,2,4,5,3,3,5,2.25,3.5,3
+52,Older,1038,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,5,4,4,4,4,3,3,3,2,2,4,3,4.125,3,4
+45,Older,2371,község,Rural,47.1815,19.3158,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,4,4,3,4,3,3,2,3,3,3,3,4,3.875,3.125,4
+23,Younger,3915,község,Rural,48.1317,21.3445,Férfi,Általános iskola,3,More,3,2,4,5,2,3,5,5,1,1,4,2,2,2,3,3.625,2,1
+56,Older,2132,község,Rural,47.695,19.1372,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,1,3,3,3,4,5,4,2,2,3,4,3,4,3,4,3.125,3.375,4
+53,Older,8000,megyeszékhely megyei jogú város,Urban,47.2908,18.3265,Férfi,Érettségi (középiskola),3,More,2,4,5,4,3,4,2,4,4,2,2,1,4,3,4,3.5,3,4
+37,Younger,1035,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,1,5,5,5,5,3,1,4,4,2,4,4,2,4,5,3.625,3.5,3
+48,Older,2378,község,Rural,47.1725,19.5023,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,5,3,5,5,2,5,4,2,3,2,4,3,4,3.875,3.375,5
+27,Younger,1013,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,1,1,4,2,1,4,2,1,5,4,5,5,5,5,4,2,4.75,5
+52,Older,1202,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,4,5,5,5,5,4,5,2,3,4,2,4,4,4,4.5,3.125,2
+39,Older,2330,város,Urban,47.3555,19.0972,Nő,Érettségi (középiskola),2,Less,3,4,5,3,4,3,2,3,4,2,4,3,4,5,4,3.375,3.875,5
+64,Older,1221,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,5,4,4,2,4,3,3,3,3,4,4,4,3.875,3.625,5
+42,Older,1042,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,4,5,5,4,4,5,3,3,3,1,2,3,1,2,2,4.125,1.875,1
+50,Older,1225,főváros,Urban,47.4825,19.1593,Férfi,Szakiskola / Szakmunkásképző,4,More,4,5,5,4,3,5,1,4,3,2,2,2,4,3,3,3.875,2.75,3
+33,Younger,3988,község,Rural,48.3967,21.6557,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,3,3,3,3,3,3,3,3,3,4,3,3,3,3,3,3.125,3
+37,Younger,3973,város,Urban,48.2573,21.8888,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,5,5,3,4,4,2,4,3,2,2,2,2,2,3,3.875,2.125,1
+37,Younger,3950,város,Urban,48.395,21.6563,Férfi,Érettségi (középiskola),3,More,4,4,5,3,5,5,4,5,3,3,3,5,5,4,4,4.375,3.75,3
+36,Younger,1084,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,3,5,4,4,5,5,3,4,2,3,4,3,3,4,4,4.125,3.375,4
+36,Younger,3234,község,Rural,47.9085,19.881,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,5,4,3,3,5,2,3,2,3,3,2,3,4,2.5,2
+48,Older,2330,város,Urban,47.3555,19.0972,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,5,5,5,5,5,4,2,3,1,1,1,3,4.625,2.375,4
+32,Younger,1095,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),3,More,5,5,5,5,5,5,5,5,3,2,3,3,3,3,3,5,3,4
+44,Older,4551,község,Rural,47.8778,21.5793,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,3,5,5,3,4,3,3,3,3,4,4,3,3,3,3.625,3.25,3
+64,Older,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,5,5,5,5,5,5,5,1,1,3,1,2,2,1,5,1.625,2
+33,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,5,5,5,5,3,3,5,4,1,5,1,5,3,3,3,4.375,3,3
+72,Older,3934,község,Rural,48.2842,21.4503,Nő,Szakiskola / Szakmunkásképző,2,Less,5,5,5,5,1,5,5,3,5,1,1,5,4,5,3,4.25,3.625,5
+76,Older,3934,község,Rural,48.2842,21.4503,Férfi,Szakiskola / Szakmunkásképző,2,Less,5,5,5,5,3,3,5,5,1,1,5,5,5,5,4,4.5,3.875,5
+31,Younger,3987,község,Rural,48.3,21.7068,Férfi,Szakiskola / Szakmunkásképző,2,Less,3,5,3,4,5,3,4,5,3,4,5,5,4,4,4,4,4.25,5
+30,Younger,3985,község,Rural,48.3521,21.6928,Férfi,Szakiskola / Szakmunkásképző,2,Less,3,2,5,5,4,4,2,4,2,2,2,2,2,1,5,3.625,2.375,3
+25,Younger,3962,község,Rural,48.3292,21.744,Nő,Érettségi (középiskola),2,Less,3,3,5,4,4,4,4,4,3,2,3,2,5,4,2,3.875,3,3
+21,Younger,3943,község,Rural,48.285,21.5168,Nő,Érettségi (középiskola),2,Less,5,5,5,5,3,4,3,3,2,3,4,5,5,2,3,4.125,3.375,3
+40,Older,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,3,5,5,2,5,3,1,4,4,5,3,5,4.125,3.75,5
+22,Younger,3974,"község,nagyközség",Rural,48.3382,21.9722,Nő,Érettségi (középiskola),2,Less,4,5,5,3,5,4,4,5,3,2,3,3,2,2,3,4.375,2.625,3
+36,Younger,3519,megyeszékhely megyei jogú város,Urban,48.1037,20.7993,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,5,5,5,5,5,3,5,1,1,3,1,3,3,3,4.75,2.25,3
+35,Younger,3961,község,Rural,48.3198,21.6563,Nő,Érettségi (középiskola),2,Less,4,5,5,3,3,3,1,3,3,3,3,3,4,3,3,3.375,3.25,4
+22,Younger,3932,község,Rural,48.2652,21.353,Férfi,Szakiskola / Szakmunkásképző,2,Less,4,3,5,3,2,4,2,3,2,2,4,3,2,2,2,3.25,2.375,2
+36,Younger,3994,"község,város",Rural,48.4732,21.492,Nő,Érettségi (középiskola),3,More,4,4,5,3,2,3,3,4,3,1,2,1,4,2,3,3.5,2.25,2
+22,Younger,3974,"község,nagyközség",Rural,48.3382,21.9722,Nő,Érettségi (középiskola),2,Less,3,3,4,3,3,3,3,4,3,3,4,4,3,3,3,3.25,3.25,3
+26,Younger,4466,község,Rural,48.1565,21.4635,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,1,4,2,2,4,2,2,4,2,2,2,3,3,3,5,2.625,3,4
+27,Younger,4466,község,Rural,48.1565,21.4635,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",1,Less,1,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1.5,1,1
+18,Younger,3971,község,Rural,48.203,21.7182,Nő,Szakiskola / Szakmunkásképző,2,Less,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+24,Younger,3896,község,Rural,48.4857,21.3585,Férfi,Érettségi (középiskola),2,Less,3,5,5,5,4,5,3,4,1,1,1,1,2,1,4,4.25,1.75,3
+49,Older,1078,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,1,4,3,2,1,2,2,5,5,4,5,4,5,4,2.125,4.25,2
+32,Younger,3950,város,Urban,48.395,21.6563,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,3,3,4,4,3,3,3,3,4,4,3,4,4,3.375,3.5,3
+67,Older,1193,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,4,5,5,5,4,2,5,3,3,2,1,1,2,4,4,2.625,5
+32,Younger,2151,város,Urban,47.6165,19.1922,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,4,4,4,3,3,4,3,3,2,3,3,3,2,3.625,2.875,4
+25,Younger,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,3,3,3,2,4,4,2,5,4,5,4,5,3.375,4.125,4
+30,Younger,4600,város,Urban,48.2227,22.0807,Nő,Szakiskola / Szakmunkásképző,2,Less,3,3,5,4,3,3,3,3,1,3,3,3,3,3,3,3.375,2.75,3
+27,Younger,3977,község,Rural,48.3582,22.0803,Nő,Érettségi (középiskola),2,Less,3,3,3,4,3,2,4,4,2,2,1,2,1,1,5,3.25,2,2
+37,Younger,3980,város,Urban,48.3967,21.6557,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,5,5,5,5,5,4,5,2,2,4,1,2,4,3,4.75,2.625,3
+44,Older,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,3,5,5,5,3,3,4,4,2,3,2,4,2,3,4,2.875,3
+41,Older,3950,város,Urban,48.395,21.6563,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,4,1,2,1,3,3,3,4,4,5,4,5,2.875,4.125,5
+45,Older,3980,város,Urban,48.3967,21.6557,Férfi,Érettségi (középiskola),2,Less,4,4,5,4,3,4,4,5,2,2,2,3,3,2,3,4.125,2.5,3
+41,Older,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,2,2,4,2,3,2,1,2,2,2,3,1,4,3,2,2.25,2.375,2
+43,Older,3980,város,Urban,48.3967,21.6557,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,4,5,4,4,5,4,4,3,3,3,3,3,3,4,4.125,3.375,5
+37,Younger,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,5,4,4,4,3,4,2,3,3,2,1,2,4,3.75,2.5,3
+66,Older,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,5,5,5,4,5,4,4,3,4,4,5,5,4.625,4.25,5
+30,Younger,2133,nagyközség,Rural,47.7317,19.1527,Férfi,Szakiskola / Szakmunkásképző,4,More,3,5,5,5,4,5,4,3,3,3,2,3,3,3,3,4.25,2.75,2
+46,Older,1034,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),2,Less,3,5,5,4,4,5,3,3,4,3,2,3,5,5,5,4,4,5
+37,Younger,3996,község,Rural,48.5395,21.4568,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,5,5,5,5,5,5,5,1,1,2,2,1,1,2,5,1.875,5
+48,Older,4028,megyeszékhely megyei jogú város,Urban,47.5288,21.6372,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,4,4,3,3,2,4,4,4,5,4,5,5,5,3.25,4.625,5
+51,Older,3980,város,Urban,48.3967,21.6557,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,1,4,5,5,4,5,3,4,3,3,2,2,5,4,5,3.875,3.5,4
+47,Older,1025,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,5,4,3,3,3,3,3,3,3,3,3,3,3.875,3,3
+22,Younger,2600,város,Urban,47.7838,19.1348,Férfi,Érettségi (középiskola),2,Less,2,4,5,4,3,4,2,4,5,4,5,5,5,5,5,3.5,4.875,5
+20,Younger,8083,város,Urban,47.3955,18.4695,Férfi,Érettségi (középiskola),2,Less,2,2,4,3,3,5,1,4,3,2,4,5,2,5,5,3,3.75,4
+54,Older,1133,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,3,3,5,5,2,2,4,5,2,2,3,2,5,2,4,3.625,3.125,5
+43,Older,2131,város,Urban,47.695,19.1372,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,5,4,5,4,4,4,4,2,1,3,3,3,3,3,4,2.75,4
+50,Older,3200,város,Urban,47.7812,19.9282,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,4,5,5,4,4,3,4,5,4,4,5,4,5,5,4,4.625,5
+45,Older,8000,megyeszékhely megyei jogú város,Urban,47.2908,18.3265,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,1,4,4,3,3,3,3,3,5,3,3,3,5,4,5,3,4,4
+26,Younger,3971,község,Rural,48.203,21.7182,Férfi,Érettségi (középiskola),2,Less,3,3,5,5,4,5,3,5,1,1,2,3,4,1,5,4.125,2.375,2
+40,Older,3980,város,Urban,48.3967,21.6557,Nő,Érettségi (középiskola),2,Less,3,3,3,4,1,1,4,3,3,2,3,1,3,4,2,2.75,2.875,5
+30,Younger,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,1,2,4,3,1,4,2,2,2,5,5,3,5,5,5,2.375,4.25,4
+69,Older,2030,megyei jogú város,Urban,47.3955,18.9103,Nő,Érettségi (középiskola),2,Less,5,4,5,5,3,2,1,2,2,3,4,4,3,3,5,3.375,3.5,4
+20,Younger,2100,város,Urban,47.601,19.3562,Nő,Érettségi (középiskola),3,More,5,5,5,4,4,5,3,5,2,2,5,5,2,2,3,4.5,3.125,4
+34,Younger,3980,város,Urban,48.3967,21.6557,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+39,Older,1162,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",4,More,3,4,5,4,3,4,2,4,1,2,3,3,2,2,4,3.625,2.5,3
+39,Older,3770,város,Urban,48.2183,20.712,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,5,5,5,5,5,3,3,5,5,1,1,5,5,5,1,4.5,3.5,5
+42,Older,1134,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,2,3,4,4,3,2,3,1,1,3,3,4,3,3,2.875,2.375,1
+38,Younger,2481,város,Urban,47.2387,18.6547,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,5,4,5,5,5,3,2,3,2,3,3,4,4.625,3,4
+38,Younger,1196,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,2,5,5,5,3,5,5,5,3,3,4,5,4,5,4,4.25,5
+41,Older,8000,megyeszékhely megyei jogú város,Urban,47.2908,18.3265,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,4,4,5,3,4,3,2,1,2,4,4,4,4.125,2.875,3
+50,Older,9500,város,Urban,47.2578,17.153,Nő,Érettségi (középiskola),2,Less,3,4,5,4,3,3,3,4,2,2,2,2,4,3,4,3.625,2.75,3
+78,Older,2030,megyei jogú város,Urban,47.3955,18.9103,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,5,5,3,4,4,2,5,3,1,3,2,2,3,3,3.875,2.625,4
+76,Older,1141,főváros,Urban,47.4825,19.1593,Nő,"Tudományos fokozat (PhD, DLA)",2,Less,3,4,5,5,2,5,2,5,2,3,3,4,4,3,4,3.875,3.5,5
+50,Older,1025,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),2,Less,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,2.875,3,3
+55,Older,1048,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,4,4,4,4,4,4,4,5,2,3,2,3,3,2,3,4.125,2.875,5
+24,Younger,2600,város,Urban,47.7838,19.1348,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,4,4,3,3,3,2,2,5,2,3,3,4,5,4,2.875,3.75,4
+70,Older,1143,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,5,4,4,3,4,4,2,2,2,2,3,4,4.125,2.75,3
+73,Older,1028,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,3,4,4,4,3,3,4,4,3,3,3,3,3,3,4,3.625,3.25,4
+70,Older,1039,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,4,4,5,5,3,5,3,4,3,3,4,4,5,5,4,4.125,4.125,5
+53,Older,2884,község,Rural,47.4715,17.9618,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,3,4,5,4,4,4,4,1,1,3,3,2,2,1,3.875,2.25,5
+73,Older,1134,főváros,Urban,47.4825,19.1593,Nő,Érettségi (középiskola),2,Less,4,4,5,5,4,4,5,4,1,2,3,2,4,3,5,4.375,3.125,5
+73,Older,2365,nagyközség,Rural,47.2587,19.3298,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,4,5,5,4,4,4,3,2,2,2,2,2,2,2,4.125,2.25,4
+68,Older,2723,község,Rural,47.2613,19.502,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,4,5,5,4,5,4,4,5,3,1,2,2,2,3,4,4.5,2.75,5
+59,Older,1039,főváros,Urban,47.4825,19.1593,Férfi,Szakiskola / Szakmunkásképző,3,More,1,1,4,3,2,4,1,2,5,3,3,2,5,4,2,2.25,3.625,5
+65,Older,3399,község,Rural,47.8508,20.4117,Férfi,"Tudományos fokozat (PhD, DLA)",2,Less,3,3,5,3,2,4,2,5,4,5,2,3,3,4,4,3.375,3.75,5
+68,Older,1173,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,5,5,3,1,3,2,4,2,2,4,3,1,3.625,2.75,4
+67,Older,2000,város,Urban,47.683,19.0635,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,2,5,5,3,3,4,4,1,3,3,3,1,4,3,3.625,2.625,3
+38,Younger,1039,főváros,Urban,47.4825,19.1593,Férfi,Érettségi (középiskola),2,Less,3,4,5,5,4,4,4,4,3,4,2,2,2,4,2,4.125,2.875,4
+67,Older,3980,város,Urban,48.3967,21.6557,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,2,5,5,5,3,5,4,5,3,2,4,3,4,3,5,4.25,3.625,5
+40,Older,1047,főváros,Urban,47.4825,19.1593,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,4,5,4,5,3,2,5,3,1,3,3,2,3,4,3.875,2.875,4
+23,Younger,3950,város,Urban,48.395,21.6563,Nő,Érettségi (középiskola),2,Less,3,4,5,3,3,5,2,3,2,3,3,4,5,4,5,3.5,3.75,4
+42,Older,1047,főváros,Urban,47.4825,19.1593,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,5,4,3,4,2,4,4,4,4,3,4,3,4,3.5,3.875,5
+64,Older,2000,város,Urban,47.683,19.0635,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",3,More,3,5,5,5,3,2,3,4,1,1,2,1,1,1,2,3.75,1.25,1
+20,Younger,6044,község,Rural,46.9375,19.4787,Férfi,Érettségi (középiskola),3,More,4,4,4,3,5,4,3,4,3,2,2,2,3,2,4,3.875,2.875,5
+20,Younger,4440,város,Urban,47.9562,21.366,Férfi,Érettségi (középiskola),3,More,4,4,5,3,5,4,3,5,1,2,2,2,2,2,3,4.125,2.125,3
+19,Younger,4600,város,Urban,48.2227,22.0807,Nő,Érettségi (középiskola),2,Less,4,3,3,4,4,4,5,5,2,3,3,3,3,2,3,4,2.75,3
+60,Older,2013,város,Urban,47.6432,19.0328,Férfi,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",1,Less,3,4,5,4,5,5,4,5,3,3,4,4,2,4,3,4.375,3.375,4
+72,Older,2000,város,Urban,47.683,19.0635,Nő,"Felsőfokú végzettség (diploma, BSc/BA, MSc/MA)",2,Less,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3

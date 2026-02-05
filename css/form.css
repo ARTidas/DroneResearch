@@ -1,0 +1,128 @@
+/* Form Styles */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /*max-width: 500px;*/ /* Limit the form width */
+    max-width: 75%;
+    margin: auto; /* Center the form */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form div {
+    margin-bottom: 15px; /* Spacing between form elements */
+}
+
+form label {
+    display: block; /* Labels above inputs */
+    margin-bottom: 5px; /* Spacing between label and input */
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form textarea,
+form select {
+    width: calc(100% - 20px); /* Full width with padding */
+    padding: 8px 10px; /* Padding inside the input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box; /* Include padding in the width */
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #666; /* Darker border on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+form input[type="submit"]:active {
+    background-color: #222; /* Even darker background on click */
+}
+
+form input[type="submit"]:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+/* Additional Styles for Select Element */
+form select {
+    appearance: none; /* Remove default styling for select */
+    background-color: #fff;
+    cursor: pointer;
+    padding-right: 30px; /* Space for dropdown arrow */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMzMzMzMzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNNC4yOSAxMEw4IDYuMjkgMTEuNzEgMTAgMTMgOC43MSA4IDMuNDIgMy4wMiA4LjcxIDEwIDEuMjkuMjkgMTEuNzEgNCA0LjI5IDEweiIvPjwvc3ZnPg=='); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 10px;
+}
+
+form select:hover,
+form select:focus {
+    border-color: #666; /* Darker border on hover/focus */
+    background-color: #fff; /* Keep background white on focus */
+}
+
+form select option {
+    color: #333;
+    background-color: #fff;
+}
+
+
+td form {
+    background-color: #f9f9f9;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+td form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin: auto;
+}
+
+td form input[type="submit"].delete {
+    background-color: #633;
+    color: #fff;
+    padding: 3px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: background-color 0.3s ease;
+    margin: auto;
+}
+

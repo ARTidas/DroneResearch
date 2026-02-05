@@ -1,0 +1,36 @@
+/* Footer Container */
+.footer_container {
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding around the content */
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 10px 0; /* Spacing above and below the footer */
+    font-size: 14px; /* Slightly larger text for the footer */
+}
+
+.footer_container p {
+    color: #fff; /* White text color */
+    margin: 0px;
+}
+
+/* Horizontal Rule Styling */
+hr {
+    border: 0;
+    height: 1px;
+    background: #555; /* Medium gray for the horizontal rule */
+    margin: 10px 0; /* Spacing above and below the horizontal rule */
+    opacity: 0.7; /* Slight transparency to soften the appearance */
+}
+
+/* Hover Effect for Footer Links (if any) */
+.footer_container a {
+    color: #aaa; /* Lighter gray for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer_container a:hover {
+    color: #fff; /* Change to white on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
