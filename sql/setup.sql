@@ -159,10 +159,16 @@ SET
 
 ALTER TABLE `02773_research`.`geo_hungary_settlements` 
   ADD COLUMN latitude DECIMAL(10, 7),
-  ADD COLUMN longitude DECIMAL(10, 7)
+  ADD COLUMN longitude DECIMAL(10, 7),
+  ADD COLUMN updated_at TIMESTAMP
 ;
 
 ALTER TABLE `02773_research`.`geo_hungary_settlement_parts` 
   ADD COLUMN latitude DECIMAL(10, 7),
-  ADD COLUMN longitude DECIMAL(10, 7)
+  ADD COLUMN longitude DECIMAL(10, 7),
+  ADD COLUMN updated_at TIMESTAMP
 ;
+
+
+SELECT * FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen';
+DELETE FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen' LIMIT 1;
