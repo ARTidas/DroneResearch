@@ -16,7 +16,7 @@ connection_string = f"mysql+pymysql://{db_config.DB_USER}:{db_config.DB_PASSWORD
 db_connection = create_engine(connection_string)
 
 # 2. SETUP GEOCODER
-geolocator = Nominatim(user_agent="hungarian_settlement_parts_project")
+geolocator = Nominatim(user_agent="thesis_project_hungarian_settlement_parts")
 
 def get_part_coordinates(part_name, settlement_name, county):
     """
@@ -52,6 +52,9 @@ SELECT id, part_name, settlement_name, county
 FROM geo_hungary_settlement_parts 
 WHERE latitude IS NULL 
   AND part_name NOT IN ('Külterület', 'Tanya', 'Lakott hely')
+  -- AND id > 404
+  -- AND id > 3698
+  -- AND id > 4109
 """
 df = pd.read_sql(query, db_connection)
 print(f"Found {len(df)} specific parts to process.")
