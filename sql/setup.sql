@@ -172,3 +172,15 @@ ALTER TABLE `02773_research`.`geo_hungary_settlement_parts`
 
 SELECT * FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen';
 DELETE FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen' LIMIT 1;
+
+
+UPDATE `02773_research`.geo_hungary_settlement_parts p
+JOIN `02773_research`.geo_hungary_settlements s ON p.ksh_id = s.ksh_id
+SET 
+    p.latitude = s.latitude,
+    p.longitude = s.longitude,
+    p.updated_at = NOW()
+WHERE 
+    p.part_type_code = '00'             -- 00 is always the center
+    OR p.part_name = 'Központi belterület'
+;
