@@ -153,3 +153,16 @@ SET
     dwellings_count         = NULLIF(REPLACE(@var_dwellings, ',', ''), ''),
     other_occupied_units    = NULLIF(REPLACE(@var_other_units, ',', ''), '')
 ;
+
+
+
+
+ALTER TABLE `02773_research`.`geo_hungary_settlements` 
+  ADD COLUMN latitude DECIMAL(10, 7),
+  ADD COLUMN longitude DECIMAL(10, 7)
+;
+
+ALTER TABLE `02773_research`.`geo_hungary_settlement_parts` 
+  ADD COLUMN latitude DECIMAL(10, 7),
+  ADD COLUMN longitude DECIMAL(10, 7)
+;
