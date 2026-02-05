@@ -1,4 +1,4 @@
-CREATE TABLE geo_hungary_settlements_v2 (
+CREATE TABLE geo_hungary_settlements (
     -- Primary Identifiers
     ksh_id VARCHAR(10) PRIMARY KEY,          -- Stored as string to preserve leading zeros
     settlement_name VARCHAR(255) NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE 02773_research.geo_hungary_settlement_parts (
 
 
 LOAD DATA LOCAL INFILE 'C:/Users/Admin/Downloads/hnt_letoltes_2025_helysegek.csv'
-INTO TABLE `02773_research`.geo_hungary_settlements_v2
+INTO TABLE `02773_research`.geo_hungary_settlements
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
 OPTIONALLY ENCLOSED BY '"'
