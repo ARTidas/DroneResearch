@@ -49,8 +49,15 @@
 				<section id="menu">
                     <nav>
                         <a href="<?php print(RequestHelper::$url_root); ?>">Main</a>
-                        <a href="<?php print(RequestHelper::$url_root); ?>/map">Map</a>
-                        <a href="<?php print(RequestHelper::$url_root); ?>/map_v2">Map V2</a>
+                        <div>
+                            <button>Maps</button>
+                            <div>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map">Pins</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_v2">Heatmap</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_all_settlements">Every settlement</a>
+                            </div>
+                        </div>
+                        
                         <!-- <a href="<?php print(RequestHelper::$url_root); ?>/map_zs">Map ZS</a>  -->
                         <a href="<?php print(RequestHelper::$url_root); ?>/word_cloud">Word cloud</a>
                         <a href="<?php print(RequestHelper::$url_root); ?>/demographics">Demographics</a>

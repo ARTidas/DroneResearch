@@ -11,6 +11,7 @@
         require(RequestHelper::$file_root . '/models/bos/mariadb_database_connection_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_v2_bo.php');
+        require(RequestHelper::$file_root . '/models/bos/map_all_settlements_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_zs_bo.php');
         require(RequestHelper::$file_root . '/models/bos/demographics_bo.php');
         require(RequestHelper::$file_root . '/models/bos/swot_bo.php');
@@ -23,6 +24,7 @@
         require(RequestHelper::$file_root . '/models/daos/abstract_dao.php');
         require(RequestHelper::$file_root . '/models/daos/map_dao.php');
         require(RequestHelper::$file_root . '/models/daos/map_v2_dao.php');
+        require(RequestHelper::$file_root . '/models/daos/map_all_settlements_dao.php');
         require(RequestHelper::$file_root . '/models/daos/map_zs_dao.php');
         require(RequestHelper::$file_root . '/models/daos/demographics_dao.php');
         require(RequestHelper::$file_root . '/models/daos/swot_dao.php');
@@ -36,6 +38,7 @@
         require(RequestHelper::$file_root . '/models/dos/abstract_do.php');
         require(RequestHelper::$file_root . '/models/dos/map_do.php');
         require(RequestHelper::$file_root . '/models/dos/map_v2_do.php');
+        require(RequestHelper::$file_root . '/models/dos/map_all_settlements_do.php');
         require(RequestHelper::$file_root . '/models/dos/map_zs_do.php');
         require(RequestHelper::$file_root . '/models/dos/demographics_do.php');
         require(RequestHelper::$file_root . '/models/dos/swot_do.php');
@@ -67,6 +70,7 @@
     require(RequestHelper::$file_root . '/views/index_view.php');
     require(RequestHelper::$file_root . '/views/map_list_view.php');
     require(RequestHelper::$file_root . '/views/map_v2_list_view.php');
+    require(RequestHelper::$file_root . '/views/map_all_settlements_list_view.php');
     require(RequestHelper::$file_root . '/views/map_zs_list_view.php');
     require(RequestHelper::$file_root . '/views/demographics_list_view.php');
     require(RequestHelper::$file_root . '/views/swot_list_view.php');
