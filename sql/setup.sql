@@ -1,4 +1,7 @@
-CREATE TABLE geo_hungary_settlements (
+-- * ****************************************************
+-- * *** Settlement level table creation ****************
+-- * ****************************************************
+CREATE TABLE 02773_research.geo_hungary_settlements (
     -- Primary Identifiers
     ksh_id VARCHAR(10) PRIMARY KEY,          -- Stored as string to preserve leading zeros
     settlement_name VARCHAR(255) NOT NULL,
@@ -36,6 +39,10 @@ CREATE TABLE geo_hungary_settlements (
     has_minority_gov_slovenian BOOLEAN DEFAULT FALSE,
     has_minority_gov_ukrainian BOOLEAN DEFAULT FALSE
 );
+
+-- * ****************************************************
+-- * *** Settlement part level table creation ***********
+-- * ****************************************************
 CREATE TABLE 02773_research.geo_hungary_settlement_parts (
     id SERIAL PRIMARY KEY,
     ksh_id VARCHAR(10) NOT NULL,             -- Foreign Key to hungarian_settlements
@@ -59,11 +66,35 @@ CREATE TABLE 02773_research.geo_hungary_settlement_parts (
     -- FOREIGN KEY (ksh_id) REFERENCES hungarian_settlements(ksh_id) ON DELETE CASCADE
 );
 
+-- * ****************************************************
+-- * *** Postal code level table creation ***************
+-- * ****************************************************
+CREATE TABLE 02773_research.geo_hungary_postal_codes (
+    id SERIAL PRIMARY KEY,
+    postal_code VARCHAR(10) NOT NULL,           -- IRSZ
+    settlement_name VARCHAR(100) NOT NULL,   -- Település (Deduced for cities)
+    
+    -- Sub-divisions
+    part_name VARCHAR(100),                  -- Településrész / Városrész (e.g., "Kismacs")
+    district_bp VARCHAR(20),                 -- KER (Only for Budapest, e.g., "XIV.")
+    
+    -- Street Details (Null for generic country data)
+    street_name VARCHAR(255),                -- Utcanév / Címhely neve
+    street_type VARCHAR(50),                 -- Utótag / Jellege (e.g., "út", "tér")
+    
+    -- House Number Ranges (For large streets with split zip codes)
+    num_start VARCHAR(20),                   -- 1. Szám
+    num_start_sign VARCHAR(10),              -- 1. Jel
+    num_end VARCHAR(20),                     -- 2. Szám
+    num_end_sign VARCHAR(10),                -- 2. Jel
+    
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-
-
-
-LOAD DATA LOCAL INFILE 'C:/Users/Admin/Downloads/hnt_letoltes_2025_helysegek.csv'
+-- * ****************************************************
+-- * *** Load KSH data into settlement level table ******
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/hnt_letoltes_2025_helysegek.csv'
 INTO TABLE `02773_research`.geo_hungary_settlements
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
@@ -124,9 +155,10 @@ SET
 
 
 
-
-
-LOAD DATA LOCAL INFILE 'C:/Users/Admin/Downloads/hnt_letoltes_2025_telepulesreszek.csv'
+-- * ****************************************************
+-- * *** Load KSH data into settlement part level table *
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/hnt_letoltes_2025_telepulesreszek.csv'
 INTO TABLE `02773_research`.geo_hungary_settlement_parts
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ',' 
@@ -155,27 +187,234 @@ SET
 ;
 
 
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_hungary.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code, 
+    settlement_name, 
+    part_name
+);
 
 
-ALTER TABLE `02773_research`.`geo_hungary_settlements` 
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Hungary *************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_hungary.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2  -- <--- THIS IS THE FIX
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code, 
+    settlement_name, 
+    part_name
+);
+
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Budapest ************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_budapest.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code,
+    street_name,
+    street_type,
+    part_name,
+    num_start,
+    num_start_sign,
+    num_end,
+    num_end_sign,
+    district_bp
+)
+SET settlement_name = 'Budapest';
+
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Debrecen ************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_debrecen.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code,
+    street_name,
+    street_type,
+    part_name,
+    num_start,
+    num_start_sign,
+    num_end,
+    num_end_sign
+)
+SET settlement_name = 'Debrecen';
+
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Gyor ****************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_gyor.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code,
+    street_name,
+    street_type,
+    part_name,
+    num_start,
+    num_start_sign,
+    num_end,
+    num_end_sign
+)
+SET settlement_name = 'Győr';
+
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Miskolc *************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_miskolc.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code,
+    street_name,
+    street_type,
+    part_name,
+    num_start,
+    num_start_sign,
+    num_end,
+    num_end_sign
+)
+SET settlement_name = 'Miskolc';
+
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Miskolc *************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_miskolc.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code,
+    street_name,
+    street_type,
+    part_name,
+    num_start,
+    num_start_sign,
+    num_end,
+    num_end_sign
+)
+SET settlement_name = 'Miskolc';
+
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Pecs ****************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_pecs.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code,
+    street_name,
+    street_type,
+    part_name,
+    num_start,
+    num_start_sign,
+    num_end,
+    num_end_sign
+)
+SET settlement_name = 'Pécs';
+
+-- * ****************************************************
+-- * *** Load MP data into postal codes level table *****
+-- * ****** Szeged **************************************
+-- * ****************************************************
+LOAD DATA LOCAL INFILE 'C:/wamp/www/DroneResearch/cdn/geo_data/Iranyitoszam-Internet_uj_szeged.csv'
+INTO TABLE 02773_research.geo_hungary_postal_codes
+CHARACTER SET latin2
+FIELDS TERMINATED BY ';' 
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 LINES
+(
+    postal_code,
+    street_name,
+    street_type,
+    part_name,
+    num_start,
+    num_start_sign,
+    num_end,
+    num_end_sign
+)
+SET settlement_name = 'Szeged';
+
+
+
+
+
+
+
+-- * ****************************************************
+-- * *** Alter settlement and settlement parts tables ***
+-- * ****** in order to hold latitude and longitude *****
+-- * ****** level details and flag on last update tile **
+-- * ****************************************************
+ALTER TABLE 02773_research.geo_hungary_settlements
   ADD COLUMN latitude DECIMAL(10, 7),
   ADD COLUMN longitude DECIMAL(10, 7),
   ADD COLUMN updated_at TIMESTAMP
 ;
-
-ALTER TABLE `02773_research`.`geo_hungary_settlement_parts` 
+ALTER TABLE 02773_research.geo_hungary_settlement_parts
   ADD COLUMN latitude DECIMAL(10, 7),
   ADD COLUMN longitude DECIMAL(10, 7),
   ADD COLUMN updated_at TIMESTAMP
 ;
+ALTER TABLE 02773_research.geo_hungary_postal_codes
+	ADD COLUMN latitude DECIMAL(10, 7),
+	ADD COLUMN longitude DECIMAL(10, 7)
+;
 
 
-SELECT * FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen';
-DELETE FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen' LIMIT 1;
-
-
-UPDATE `02773_research`.geo_hungary_settlement_parts p
-JOIN `02773_research`.geo_hungary_settlements s ON p.ksh_id = s.ksh_id
+-- * ****************************************************
+-- * *** Save resources and fill in details *************
+-- * ****************************************************
+UPDATE 02773_research.geo_hungary_settlement_parts p
+JOIN 02773_research.geo_hungary_settlements s ON p.ksh_id = s.ksh_id
 SET 
     p.latitude = s.latitude,
     p.longitude = s.longitude,
@@ -183,4 +422,58 @@ SET
 WHERE 
     p.part_type_code = '00'             -- 00 is always the center
     OR p.part_name = 'Központi belterület'
+;
+
+
+-- * ****************************************************
+-- * *** Checking for errors ****************************
+-- * ****** Quick fixes *********************************
+-- * ****************************************************
+SELECT * FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen';
+DELETE FROM 02773_research.geo_hungary_settlements WHERE settlement_name = 'Összesen' LIMIT 1;
+SELECT postal_code, COUNT(1) FROM 02773_research.geo_hungary_postal_codes GROUP BY 1 ORDER BY 2 DESC;
+SELECT * FROM 02773_research.geo_hungary_postal_codes WHERE postal_code = '';
+DELETE FROM 02773_research.geo_hungary_postal_codes WHERE postal_code = '';
+SELECT * FROM 02773_research.geo_hungary_postal_codes WHERE postal_code = 4002;
+
+
+
+
+
+
+-- * ****************************************************
+-- * *** Query result with questionnaire details ********
+-- * ****************************************************
+SELECT
+	`RESPONSES`.`postal_code`,
+  `GEO_SETTLEMENTS`.*
+FROM (
+	`02773_research`.`form_responses_drone_society` `RESPONSES` 
+		LEFT JOIN (
+			SELECT
+				SUB_GEO_SETTLEMENT_PARTS.postal_code AS postal_code,
+				GROUP_CONCAT(DISTINCT SUB_GEO_SETTLEMENTS.settlement_type SEPARATOR ',') AS type,
+				ROUND(AVG(SUB_GEO_SETTLEMENT_PARTS.latitude), 4) AS latitude,
+				ROUND(AVG(SUB_GEO_SETTLEMENT_PARTS.longitude), 4) AS longitude
+			FROM
+				02773_research.geo_hungary_settlements SUB_GEO_SETTLEMENTS
+				INNER JOIN 02773_research.geo_hungary_settlement_parts SUB_GEO_SETTLEMENT_PARTS
+					ON SUB_GEO_SETTLEMENTS.ksh_id = SUB_GEO_SETTLEMENT_PARTS.ksh_id
+			GROUP BY
+				SUB_GEO_SETTLEMENT_PARTS.postal_code
+		) `GEO_SETTLEMENTS` 
+		ON (
+			`GEO_SETTLEMENTS`.`postal_code` = IF(
+				LEFT(`RESPONSES`.`postal_code`,1) = 1, 
+				1000,
+				`RESPONSES`.`postal_code`
+			)
+		)
+) 
+WHERE
+	`RESPONSES`.`postal_code` NOT IN ('1040 Wien','07634','Külföld') AND 
+	`RESPONSES`.`gender` NOT IN ('Húsos fagyi','') AND 
+	`RESPONSES`.`postal_code` > 0 AND 
+	`RESPONSES`.`age` > 17 AND
+  `GEO_SETTLEMENTS`.`postal_code` IS NULL
 ;
