@@ -1,0 +1,40 @@
+<?php
+
+	/* ********************************************************
+	 * ********************************************************
+	 * ********************************************************/
+	class MapUrbanVsRuralDao extends AbstractDao {
+
+		/* ********************************************************
+		 * ********************************************************
+		 * ********************************************************/
+		public function getList() {
+			$query_string = "/* __CLASS__ __FUNCTION__ __FILE__ __LINE__ */
+				SELECT 
+					postal_code, 
+					settlement_name, 
+					category,           -- 'Urban' or 'Rural'
+					population, 
+					latitude, 
+					longitude 
+				FROM 02773_research.geo_hungary_postal_codes_aggregated
+				WHERE latitude IS NOT NULL AND population > 0;
+            ;";
+
+			try {
+				$handler = ($this->database_connection_bo)->getConnection();
+				$statement = $handler->prepare($query_string);
+				$statement->execute();
+				
+				return $statement->fetchAll(PDO::FETCH_ASSOC);
+			}
+			catch(Exception $exception) {
+				LogHelper::addError('Error: ' . $exception->getMessage());
+
+				return false;
+			}
+		}
+
+		
+	}
+?>

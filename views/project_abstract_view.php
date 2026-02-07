@@ -52,9 +52,11 @@
                         <div>
                             <button>Maps</button>
                             <div>
-                                <a href="<?php print(RequestHelper::$url_root); ?>/map">Pins</a>
-                                <a href="<?php print(RequestHelper::$url_root); ?>/map_v2">Heatmap</a>
-                                <a href="<?php print(RequestHelper::$url_root); ?>/map_all_settlements">Every settlement</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map">Questionnaire pins</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_v2">Questionnaire heatmap</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_urban_vs_rural">Urban vs. Rural</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_all_settlements">Settlements</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_all_postal_codes">Postal codes</a>
                             </div>
                         </div>
                         

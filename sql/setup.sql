@@ -91,6 +91,37 @@ CREATE TABLE 02773_research.geo_hungary_postal_codes (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+
+-- * ****************************************************
+-- * *** Postal code level aggregate table creation *****
+-- * ****************************************************
+CREATE TABLE 02773_research.geo_hungary_postal_codes_aggregated (
+    -- The Primary Key
+    postal_code VARCHAR(10) PRIMARY KEY,
+
+    -- The Categorization (Our Goal)
+    category VARCHAR(20),                -- 'Urban' or 'Rural'
+    
+    -- Core Location Details
+    settlement_name VARCHAR(255),        -- Primary settlement name
+    county VARCHAR(100),
+    district VARCHAR(100),               -- Járás
+    settlement_type VARCHAR(50),         -- The source of the categorization
+    
+    -- Aggregated Statistics
+    population INT DEFAULT 0,            -- Population living specifically in this Zip
+    settlement_total_pop INT,            -- Total population of the city/village
+    
+    -- Geospatial Center
+    latitude DECIMAL(10, 7),
+    longitude DECIMAL(10, 7),
+    
+    -- Metadata
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
 -- * ****************************************************
 -- * *** Load KSH data into settlement level table ******
 -- * ****************************************************
@@ -438,6 +469,283 @@ SELECT * FROM 02773_research.geo_hungary_postal_codes WHERE postal_code = 4002;
 
 
 
+
+-- * ****************************************************
+-- * *** Creating the final aggregate table *************
+-- * ****** Postal codes  *******************************
+-- * ****************************************************
+INSERT IGNORE INTO 02773_research.geo_hungary_postal_codes_aggregated (postal_code)
+SELECT DISTINCT postal_code 
+FROM 02773_research.geo_hungary_settlement_parts 
+WHERE postal_code IS NOT NULL AND postal_code != '';
+
+INSERT IGNORE INTO 02773_research.geo_hungary_postal_codes_aggregated (postal_code)
+SELECT DISTINCT postal_code 
+FROM 02773_research.geo_hungary_postal_codes 
+WHERE postal_code IS NOT NULL AND postal_code != '';
+
+
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated target
+JOIN (
+    -- Grouping by postal code to pick the primary settlement details for each zip
+    SELECT 
+        p.postal_code, 
+        s.settlement_name, 
+        s.county, 
+        s.district, 
+        s.settlement_type,
+        s.population as city_wide_pop
+    FROM 02773_research.geo_hungary_settlement_parts p
+    JOIN 02773_research.geo_hungary_settlements s ON p.ksh_id = s.ksh_id
+    WHERE p.postal_code IS NOT NULL
+    GROUP BY p.postal_code
+) src ON target.postal_code = src.postal_code
+SET 
+    target.settlement_name = src.settlement_name,
+    target.county = src.county,
+    target.district = src.district,
+    target.settlement_type = src.settlement_type,
+    target.settlement_total_pop = src.city_wide_pop,
+    
+    -- SCIENTIFIC CLASSIFICATION LOGIC
+    /*target.category = CASE 
+        WHEN src.settlement_type LIKE '%Budapest%' THEN 'Urban'
+        WHEN src.settlement_type LIKE '%város%' THEN 'Urban'  -- Covers 'megyei jogú város' too
+        ELSE 'Rural'                                          -- Covers 'község', 'nagyközség'
+    END*/
+    target.category = CASE 
+        WHEN src.settlement_type LIKE '%Budapest%' THEN 'Urban'
+        WHEN src.settlement_type LIKE '%város%' THEN 'Urban'      -- Covers 'megyei jogú város' too
+        WHEN src.settlement_type LIKE '%nagyközség%' THEN 'Urban' -- Covers 'nagyközség'
+        ELSE 'Rural'                                              -- Covers 'község'
+    END
+;
+
+
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated target
+JOIN (
+    SELECT postal_code, SUM(population) as local_zip_pop
+    FROM 02773_research.geo_hungary_settlement_parts
+    WHERE postal_code IS NOT NULL
+    GROUP BY postal_code
+) src ON target.postal_code = src.postal_code
+SET target.population = src.local_zip_pop;
+
+
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated target
+JOIN (
+    SELECT postal_code, AVG(latitude) as lat, AVG(longitude) as lon
+    FROM 02773_research.geo_hungary_postal_codes
+    WHERE latitude IS NOT NULL
+    GROUP BY postal_code
+) src ON target.postal_code = src.postal_code
+SET target.latitude = src.lat, target.longitude = src.lon;
+
+
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated target
+JOIN (
+    SELECT postal_code, AVG(latitude) as lat, AVG(longitude) as lon
+    FROM 02773_research.geo_hungary_settlement_parts
+    WHERE latitude IS NOT NULL
+    GROUP BY postal_code
+) src ON target.postal_code = src.postal_code
+SET target.latitude = src.lat, target.longitude = src.lon
+WHERE target.latitude IS NULL; -- Only update if we didn't find street data
+
+
+
+
+-- * ****************************************************
+-- * *** Update postal codes by regex if not found ******
+-- * ****************************************************
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated t
+JOIN 02773_research.geo_hungary_settlements s 
+    ON s.settlement_name = 'Budapest' -- Join to get total population/county data
+SET 
+    t.settlement_name = 'Budapest',
+    t.county = 'Budapest',
+    t.category = 'Urban',
+    t.settlement_type = 'főváros',
+    t.settlement_total_pop = s.population,
+    
+    -- SMART DISTRICT EXTRACTION (Middle 2 digits -> Roman Numeral)
+    t.district = CASE SUBSTRING(t.postal_code, 2, 2)
+        WHEN '01' THEN 'I. kerület'
+        WHEN '02' THEN 'II. kerület'
+        WHEN '03' THEN 'III. kerület'
+        WHEN '04' THEN 'IV. kerület'
+        WHEN '05' THEN 'V. kerület'
+        WHEN '06' THEN 'VI. kerület'
+        WHEN '07' THEN 'VII. kerület'
+        WHEN '08' THEN 'VIII. kerület'
+        WHEN '09' THEN 'IX. kerület'
+        WHEN '10' THEN 'X. kerület'
+        WHEN '11' THEN 'XI. kerület'
+        WHEN '12' THEN 'XII. kerület'
+        WHEN '13' THEN 'XIII. kerület'
+        WHEN '14' THEN 'XIV. kerület'
+        WHEN '15' THEN 'XV. kerület'
+        WHEN '16' THEN 'XVI. kerület'
+        WHEN '17' THEN 'XVII. kerület'
+        WHEN '18' THEN 'XVIII. kerület'
+        WHEN '19' THEN 'XIX. kerület'
+        WHEN '20' THEN 'XX. kerület'
+        WHEN '21' THEN 'XXI. kerület'
+        WHEN '22' THEN 'XXII. kerület'
+        WHEN '23' THEN 'XXIII. kerület'
+        WHEN '00' THEN 'Margitsziget' -- Special case (1007)
+        ELSE 'Budapest'
+    END
+WHERE 
+    t.postal_code LIKE '1%' 
+    AND LENGTH(t.postal_code) = 4
+    AND t.settlement_name IS NULL;
+
+-- 1. DEBRECEN (Starts with 40..)
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated t
+JOIN 02773_research.geo_hungary_settlements s 
+    ON s.settlement_name = 'Debrecen'
+SET 
+    t.settlement_name = s.settlement_name,
+    t.county = s.county,
+    t.district = s.district,
+    t.settlement_type = s.settlement_type,
+    t.settlement_total_pop = s.population,
+    t.category = 'Urban'
+WHERE t.postal_code LIKE '40%' AND t.settlement_name IS NULL;
+
+-- 2. MISKOLC (Starts with 35..)
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated t
+JOIN 02773_research.geo_hungary_settlements s 
+    ON s.settlement_name = 'Miskolc'
+SET 
+    t.settlement_name = s.settlement_name,
+    t.county = s.county,
+    t.district = s.district,
+    t.settlement_type = s.settlement_type,
+    t.settlement_total_pop = s.population,
+    t.category = 'Urban'
+WHERE t.postal_code LIKE '35%' AND t.settlement_name IS NULL;
+
+-- 3. NYÍREGYHÁZA (Starts with 44..)
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated t
+JOIN 02773_research.geo_hungary_settlements s 
+    ON s.settlement_name = 'Nyíregyháza'
+SET 
+    t.settlement_name = s.settlement_name,
+    t.county = s.county,
+    t.district = s.district,
+    t.settlement_type = s.settlement_type,
+    t.settlement_total_pop = s.population,
+    t.category = 'Urban'
+WHERE t.postal_code LIKE '44%' AND t.settlement_name IS NULL;
+
+-- 4. PÉCS (Starts with 76..)
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated t
+JOIN 02773_research.geo_hungary_settlements s 
+    ON s.settlement_name = 'Pécs'
+SET 
+    t.settlement_name = s.settlement_name,
+    t.county = s.county,
+    t.district = s.district,
+    t.settlement_type = s.settlement_type,
+    t.settlement_total_pop = s.population,
+    t.category = 'Urban'
+WHERE t.postal_code LIKE '76%' AND t.settlement_name IS NULL;
+
+-- 5. SZEGED (Starts with 67..)
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated t
+JOIN 02773_research.geo_hungary_settlements s 
+    ON s.settlement_name = 'Szeged'
+SET 
+    t.settlement_name = s.settlement_name,
+    t.county = s.county,
+    t.district = s.district,
+    t.settlement_type = s.settlement_type,
+    t.settlement_total_pop = s.population,
+    t.category = 'Urban'
+WHERE t.postal_code LIKE '67%' AND t.settlement_name IS NULL;
+
+-- 6. GYŐR (Starts with 90..)
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated t
+JOIN 02773_research.geo_hungary_settlements s 
+    ON s.settlement_name = 'Győr'
+SET 
+    t.settlement_name = s.settlement_name,
+    t.county = s.county,
+    t.district = s.district,
+    t.settlement_type = s.settlement_type,
+    t.settlement_total_pop = s.population,
+    t.category = 'Urban'
+WHERE t.postal_code LIKE '90%' AND t.settlement_name IS NULL;
+
+
+
+
+
+-- * ****************************************************
+-- * *** Population FIX/HACK ****************************
+-- * ****************************************************
+UPDATE 02773_research.geo_hungary_postal_codes_aggregated target
+-- 1. Get the Total City Population
+JOIN 02773_research.geo_hungary_settlements s 
+    ON target.settlement_name = s.settlement_name
+-- 2. Calculate the Ratio of streets for each Zip
+JOIN (
+    SELECT 
+        raw.postal_code,
+        raw.settlement_name,
+        COUNT(*) as street_count,
+        CityTotals.total_streets,
+        (COUNT(*) / CityTotals.total_streets) as share_ratio
+    FROM 02773_research.geo_hungary_postal_codes raw
+    JOIN (
+        -- Count total streets per city
+        SELECT settlement_name, COUNT(*) as total_streets
+        FROM 02773_research.geo_hungary_postal_codes
+        GROUP BY settlement_name
+    ) CityTotals ON raw.settlement_name = CityTotals.settlement_name
+    GROUP BY raw.postal_code, raw.settlement_name
+) Weights ON target.postal_code = Weights.postal_code
+SET 
+    -- 3. Apply the ratio to the total population
+    target.population = ROUND(s.population * Weights.share_ratio),
+    target.settlement_total_pop = s.population,
+    target.updated_at = NOW()
+WHERE 
+    (target.population IS NULL OR target.population = 0)
+    AND s.population > 0;
+
+
+
+
+
+
+
+
+-- * ****************************************************
+-- * *** Query statistics of the resulting table ********
+-- * ****************************************************
+SELECT 
+    category, 
+    COUNT(*) as postal_code_count, 
+    FORMAT(SUM(population), 0) as total_population 
+FROM 02773_research.geo_hungary_postal_codes_aggregated 
+GROUP BY category;
+
+SELECT
+	settlement_type,
+    COUNT(1) AS record_count
+FROM 02773_research.geo_hungary_settlements
+GROUP BY settlement_type
+ORDER BY 2;
+
+SELECT 
+    category, 
+    COUNT(1) AS postal_code_count, 
+    FORMAT(SUM(population), 0) as total_population 
+FROM 02773_research.geo_hungary_postal_codes_aggregated 
+GROUP BY category;
 
 
 
