@@ -11,30 +11,7 @@
         public function displayContent() {
 			?>
                 <link rel="stylesheet" href="<?php print(RequestHelper::$url_root); ?>/js/Leaflet/leaflet.css" type="text/css" />
-                <style>
-                    #map {
-                        height: 60vh;
-                        width: 65vw;
-                        border: 1px solid #000;
-                        margin: auto;
-                        margin: 10px;
-                        float: left;
-                    }
-                    #map_log {
-                        width: 17vw;
-                        float: right;
-                        font-size: 10px;
-                        margin-left: 0px;
-                    }
-                    #map_full {
-                        height: 80vh;
-                        width: 94vw;
-                        border: 1px solid #000;
-                        margin: auto;
-                        margin: 10px;
-                        float: left;
-                    }
-                </style>
+                <link rel="stylesheet" href="<?php print(RequestHelper::$url_root); ?>/css/map.css" type="text/css" />
                 <script type="text/javascript" src="<?php print(RequestHelper::$url_root); ?>/js/Leaflet/leaflet.js"></script>
                 <script type="text/javascript" src="<?php print(RequestHelper::$url_root); ?>/js/map_list.js"></script>
                 

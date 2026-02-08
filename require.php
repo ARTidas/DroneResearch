@@ -13,6 +13,7 @@
         require(RequestHelper::$file_root . '/models/bos/map_v2_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_all_settlements_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_all_postal_codes_bo.php');
+        require(RequestHelper::$file_root . '/models/bos/map_urban_vs_rural_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_zs_bo.php');
         require(RequestHelper::$file_root . '/models/bos/demographics_bo.php');
         require(RequestHelper::$file_root . '/models/bos/swot_bo.php');

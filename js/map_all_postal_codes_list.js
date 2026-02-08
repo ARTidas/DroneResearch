@@ -26,6 +26,13 @@ function initializeMap(data) {
         crossOrigin: true 
     });
 
+    // Using a cleaner base map (CartoDB Light) makes the data colors pop more than standard OSM
+    let CartoDB = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
     // 3. Screenshot Tool
     const screenshoter = L.simpleMapScreenshoter({ hidden: true }).addTo(map);
 

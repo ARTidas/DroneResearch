@@ -31,6 +31,12 @@ function initializeMap(data) {
             attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }
     ).addTo(map);
+    // Using a cleaner base map (CartoDB Light) makes the data colors pop more than standard OSM
+    let CartoDB = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
 
     // Create a Layer Group for the new responder markers
     const responderGroup = L.layerGroup().addTo(map);
@@ -39,6 +45,7 @@ function initializeMap(data) {
     L.control.layers(
         {
             'OSM': OpenStreetMap,
+            "Clean Map": CartoDB,
             'Google': L.tileLayer(
                 'http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}',
                 {

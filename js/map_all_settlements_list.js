@@ -28,6 +28,13 @@ function initializeMap(data) {
         crossOrigin: true 
     });
 
+    // Using a cleaner base map (CartoDB Light) makes the data colors pop more than standard OSM
+    let CartoDB = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
     // 3. Add the Screenshot / Export Control
     const screenshoter = L.simpleMapScreenshoter({
         hidden: true 
@@ -133,7 +140,7 @@ function initializeMap(data) {
 
     // 8. Add Layer Control
     L.control.layers(
-        { 'OpenStreetMap': OpenStreetMap, 'Google Satellite': GoogleSatellite },
+        { 'OpenStreetMap': OpenStreetMap, "Clean Map": CartoDB, 'Google Satellite': GoogleSatellite },
         { 'Settlements': settlementGroup },
         { position: 'topleft' }
     ).addTo(map);

@@ -8,9 +8,10 @@
         public $age;
         public $age_group;
         public $responder_postal_code;
-        public $profession;
         public $geo_responder_settlement_type;
         public $settlement_group;
+        public $profession;
+        public $biggest_fear_hope;
         public $geo_responder_settlement_latitude;
         public $geo_responder_settlement_longitude;
         public $gender;

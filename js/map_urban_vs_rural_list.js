@@ -18,6 +18,14 @@ function initializeMap(data) {
         maxZoom: 19
     }).addTo(map);
 
+    let OpenStreetMap = L.tileLayer(
+        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+            maxZoom: 18,
+            attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }
+    ).addTo(map);
+
     let GoogleSatellite = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
         attribution: 'Google',
         crossOrigin: true 
@@ -93,6 +101,7 @@ function initializeMap(data) {
 
     const baseMaps = {
         "Clean Map": CartoDB,
+        'OSM': OpenStreetMap,
         "Satellite": GoogleSatellite
     };
 

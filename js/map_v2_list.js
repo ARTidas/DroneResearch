@@ -26,6 +26,13 @@ function initializeMap(data) {
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    // Using a cleaner base map (CartoDB Light) makes the data colors pop more than standard OSM
+    let CartoDB = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
     // Note: Google Maps tiles often block programmatic downloading due to CORS policies.
     // If the download fails or the background is blank, switch to the OSM layer before clicking download.
     let GoogleSatellite = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
@@ -131,7 +138,7 @@ function initializeMap(data) {
 
     // 6. Add Layer Control
     L.control.layers(
-        { 'OpenStreetMap': OpenStreetMap, 'Google Satellite': GoogleSatellite },
+        { 'OpenStreetMap': OpenStreetMap, "Clean Map": CartoDB, 'Google Satellite': GoogleSatellite },
         { 'Responders': responderGroup },
         { position: 'topleft' }
     ).addTo(map);

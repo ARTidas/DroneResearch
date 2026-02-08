@@ -1,0 +1,23 @@
+#map {
+    height: 60vh;
+    width: 65vw;
+    border: 1px solid #000;
+    margin: auto;
+    margin: 10px;
+    float: left;
+}
+#map_log {
+    width: 17vw;
+    float: right;
+    font-size: 10px;
+    margin-left: 0px;
+}
+#map_full {
+    height: 80vh;
+    width: 94vw;
+    border: 1px solid #000;
+    margin: auto;
+    margin: 10px;
+    float: left;
+    z-index: 0;
+}

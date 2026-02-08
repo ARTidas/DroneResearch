@@ -14,8 +14,9 @@
                     `RESPONSES`.`age` AS `age`,
                     IF(`RESPONSES`.`age` > 76.64 / 2,'Older','Younger') AS `age_group`,
                     `RESPONSES`.`postal_code` AS `responder_postal_code`,
-                    `GEO_SETTLEMENTS`.`type` AS `geo_responder_settlement_type`,
-                    IF(`GEO_SETTLEMENTS`.`type` like '%község%','Rural','Urban') AS `settlement_group`,
+                    `RESPONSES`.`profession` AS `profession`,
+                    `GEO_SETTLEMENTS`.`settlement_type` AS `geo_responder_settlement_type`,
+                    IF(`GEO_SETTLEMENTS`.`settlement_type` like '%község%','Rural','Urban') AS `settlement_group`,
                     `GEO_SETTLEMENTS`.`latitude` AS `geo_responder_settlement_latitude`,
                     `GEO_SETTLEMENTS`.`longitude` AS `geo_responder_settlement_longitude`,
                     CASE `RESPONSES`.`gender` 
@@ -50,29 +51,10 @@
                     `RESPONSES`.`W1` AS `W1`,`RESPONSES`.`W2` AS `W2`,`RESPONSES`.`W3` AS `W3`,`RESPONSES`.`W4` AS `W4`,
                     `RESPONSES`.`T1` AS `T1`,`RESPONSES`.`T2` AS `T2`,`RESPONSES`.`T3` AS `T3`,`RESPONSES`.`T4` AS `T4`,
                     `RESPONSES`.`biggest_fear_hope` AS `biggest_fear_hope`
-                FROM (
+                FROM 
                     `02773_research`.`form_responses_drone_society` `RESPONSES` 
-                        LEFT JOIN (
-                            SELECT
-                                `SUB_GEO_SETTLEMENTS`.`postal_code` AS `postal_code`,
-                                GROUP_CONCAT(DISTINCT `SUB_GEO_SETTLEMENTS`.`type` SEPARATOR ',') AS `type`,
-                                ROUND(AVG(`SUB_GEO_SETTLEMENTS`.`latitude`), 4) AS `latitude`,
-                                ROUND(AVG(`SUB_GEO_SETTLEMENTS`.`longitude`), 4) AS `longitude` 
-                            FROM
-                                `02773_research`.`geo_hungary_settlements` `SUB_GEO_SETTLEMENTS` 
-                            GROUP BY
-                                `SUB_GEO_SETTLEMENTS`.`postal_code` 
-                            ORDER BY
-                                `SUB_GEO_SETTLEMENTS`.`type`
-                        ) `GEO_SETTLEMENTS` 
-                        ON (
-                            `GEO_SETTLEMENTS`.`postal_code` = IF(
-                                LEFT(`RESPONSES`.`postal_code`,1) = 1, 
-                                1000,
-                                `RESPONSES`.`postal_code`
-                            )
-                        )
-                ) 
+                    LEFT JOIN `02773_research`.`geo_hungary_postal_codes_aggregated` `GEO_SETTLEMENTS`
+                        ON `RESPONSES`.`postal_code` = `GEO_SETTLEMENTS`.`postal_code`
                 WHERE
                     `RESPONSES`.`postal_code` NOT IN ('1040 Wien','07634','Külföld') AND 
                     `RESPONSES`.`gender` NOT IN ('Húsos fagyi','') AND 

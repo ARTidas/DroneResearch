@@ -22,6 +22,13 @@ function initializeMap(data) {
         crossOrigin: true // Fontos az exportáláshoz
     }).addTo(map);
 
+    // Using a cleaner base map (CartoDB Light) makes the data colors pop more than standard OSM
+    let CartoDB = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; OpenStreetMap &copy; CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }).addTo(map);
+
     let GoogleSatellite = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
         attribution: 'Google',
         crossOrigin: true 
@@ -122,7 +129,7 @@ function initializeMap(data) {
 
     // 7. Add Layer Control
     L.control.layers(
-        { 'OpenStreetMap': OpenStreetMap, 'Google Satellite': GoogleSatellite },
+        { 'OpenStreetMap': OpenStreetMap, "Clean Map": CartoDB, 'Google Satellite': GoogleSatellite },
         { 'Kiküldések': responderGroup },
         { position: 'topleft' }
     ).addTo(map);

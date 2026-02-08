@@ -16,6 +16,7 @@
         public $education;
         public $drone_familiarity;
         public $drone_familiarity_group;
+        public $profession;
         public $S1;
         public $S2;
         public $S3;

@@ -7,6 +7,7 @@
 
         public $age;
         public $age_group;
+        public $profession;
         public $responder_postal_code;
         public $geo_responder_settlement_type;
         public $settlement_group;
