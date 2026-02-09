@@ -1,7 +1,7 @@
 <?php
 
 	$bo = $bo_factory->get(StringHelper::toPascalCase(RequestHelper::$actor_name));
-    $do = new (RequestHelper::$actor_class_name . 'Do');
+    $do = new FormDroneSocietyDo;
 	
 	/*$do->age = 38;
 	$do->country = 'Hungary';
