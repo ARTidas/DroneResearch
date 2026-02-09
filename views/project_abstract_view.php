@@ -59,6 +59,13 @@
                         </div>
 
                         <div>
+                            <button>Map reports</button>
+                            <div>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/drone_familiarity">Drone familiarity</a>
+                            </div>
+                        </div>
+
+                        <div>
                             <button>Maps</button>
                             <div>
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map">Questionnaire pins</a>
