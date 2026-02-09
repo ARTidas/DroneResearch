@@ -2,3 +2,4 @@
 models/bos/mariadb_database_connection_bo.php
 scrapers/geo/db_config.py
 scrapers/geo/__pycache__/*.*
+cdn/form_data/*.*

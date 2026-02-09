@@ -49,6 +49,15 @@
 				<section id="menu">
                     <nav>
                         <a href="<?php print(RequestHelper::$url_root); ?>">Main</a>
+
+                        <div>
+                            <button>Forms</button>
+                            <div>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/form_drone_society/hun">(HUN) Drónok társadalmi megítélése</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/form_drone_society/eng">(ENG) Dronses social perception</a>
+                            </div>
+                        </div>
+
                         <div>
                             <button>Maps</button>
                             <div>

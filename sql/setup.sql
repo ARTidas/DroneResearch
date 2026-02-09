@@ -749,6 +749,50 @@ GROUP BY category;
 
 
 
+
+
+
+-- * ****************************************************
+-- * *** Questionnaire  ********
+-- * ****************************************************
+CREATE TABLE `02773_research`.`form_responses_drone_society_v2` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `submitted_at` datetime DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `country` varchar(256) DEFAULT NULL,
+  `postal_code` varchar(20) DEFAULT NULL,
+  `profession` varchar(256) DEFAULT NULL,
+  `gender` varchar(256) DEFAULT NULL,
+  `education` varchar(256) DEFAULT NULL,
+  `drone_familiarity` varchar(256) DEFAULT NULL,
+  `S1` int(11) DEFAULT NULL,
+  `S2` int(11) DEFAULT NULL,
+  `S3` int(11) DEFAULT NULL,
+  `S4` int(11) DEFAULT NULL,
+  `W1` int(11) DEFAULT NULL,
+  `W2` int(11) DEFAULT NULL,
+  `W3` int(11) DEFAULT NULL,
+  `W4` int(11) DEFAULT NULL,
+  `O1` int(11) DEFAULT NULL,
+  `O2` int(11) DEFAULT NULL,
+  `O3` int(11) DEFAULT NULL,
+  `O4` int(11) DEFAULT NULL,
+  `T1` int(11) DEFAULT NULL,
+  `T2` int(11) DEFAULT NULL,
+  `T3` int(11) DEFAULT NULL,
+  `T4` int(11) DEFAULT NULL,
+  `biggest_fear_hope` text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=257 DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+
+
+
+
+
+
+
+
 -- * ****************************************************
 -- * *** Query result with questionnaire details ********
 -- * ****************************************************

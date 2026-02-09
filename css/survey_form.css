@@ -1,0 +1,117 @@
+body {
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    /*border-top: 10px solid #673ab7;*/ /* Google Forms Purple Style */
+}
+h1 {
+    margin-top: 0;
+    color: #202124;
+}
+p.description {
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 30px;
+}
+.section-title {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    /*margin-top: 40px;*/
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 25px;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+.form-group:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #202124;
+}
+input[type="text"], 
+input[type="number"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dadce0; /* Google Grey */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #333;
+    background-color: #fcfcfc;
+}
+
+/* Likert Scale Styling */
+.likert-scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.likert-option {
+    text-align: center;
+}
+.likert-option input[type="radio"] {
+    margin-bottom: 5px;
+    transform: scale(1.2);
+    accent-color: #333;
+}
+.likert-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+/* Buttons */
+button {
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+}
+button:hover {
+    background-color: #333;
+}
+.required {
+    color: #d93025;
+    margin-left: 3px;
+}

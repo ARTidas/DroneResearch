@@ -9,6 +9,7 @@
          * ********************************************************/
         require(RequestHelper::$file_root . '/models/bos/abstract_bo.php');
         require(RequestHelper::$file_root . '/models/bos/mariadb_database_connection_bo.php');
+        require(RequestHelper::$file_root . '/models/bos/form_drone_society_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_v2_bo.php');
         require(RequestHelper::$file_root . '/models/bos/map_all_settlements_bo.php');
@@ -24,6 +25,7 @@
          * *** Data Access Objects ********************************
          * ********************************************************/
         require(RequestHelper::$file_root . '/models/daos/abstract_dao.php');
+        require(RequestHelper::$file_root . '/models/daos/form_drone_society_dao.php');
         require(RequestHelper::$file_root . '/models/daos/map_dao.php');
         require(RequestHelper::$file_root . '/models/daos/map_v2_dao.php');
         require(RequestHelper::$file_root . '/models/daos/map_all_settlements_dao.php');
@@ -40,6 +42,7 @@
          * ********************************************************/
         require(RequestHelper::$file_root . '/models/dos/view_do.php');
         require(RequestHelper::$file_root . '/models/dos/abstract_do.php');
+        require(RequestHelper::$file_root . '/models/dos/form_drone_society_do.php');
         require(RequestHelper::$file_root . '/models/dos/map_do.php');
         require(RequestHelper::$file_root . '/models/dos/map_v2_do.php');
         require(RequestHelper::$file_root . '/models/dos/map_all_settlements_do.php');
@@ -74,6 +77,7 @@
     require(RequestHelper::$file_root . '/views/abstract_view.php');
     require(RequestHelper::$file_root . '/views/project_abstract_view.php');
     require(RequestHelper::$file_root . '/views/index_view.php');
+    require(RequestHelper::$file_root . '/views/form_drone_society_hun_list_view.php');
     require(RequestHelper::$file_root . '/views/map_list_view.php');
     require(RequestHelper::$file_root . '/views/map_v2_list_view.php');
     require(RequestHelper::$file_root . '/views/map_all_settlements_list_view.php');
