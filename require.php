@@ -82,6 +82,9 @@
     require(RequestHelper::$file_root . '/views/index_view.php');
     require(RequestHelper::$file_root . '/views/form_drone_society_hun_list_view.php');
     require(RequestHelper::$file_root . '/views/map_report_drone_familiarity_view.php');
+    require(RequestHelper::$file_root . '/views/map_report_swot_view.php');
+    require(RequestHelper::$file_root . '/views/map_report_so_attribute_view.php');
+    require(RequestHelper::$file_root . '/views/map_report_wt_attribute_view.php');
     require(RequestHelper::$file_root . '/views/map_list_view.php');
     require(RequestHelper::$file_root . '/views/map_v2_list_view.php');
     require(RequestHelper::$file_root . '/views/map_all_settlements_list_view.php');

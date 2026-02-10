@@ -62,6 +62,9 @@
                             <button>Map reports</button>
                             <div>
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map_report/drone_familiarity">Drone familiarity</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/swot">SWOT</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/so_attribute">SO_Attribute</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/wt_attribute">WT_Attribute</a>
                             </div>
                         </div>
 

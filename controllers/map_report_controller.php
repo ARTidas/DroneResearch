@@ -23,7 +23,42 @@
                     json_encode($do_list) //data_array,
 				),
 			);
-			
+			break;
+		case 'swot':
+			$view = new MapReportSwotView(
+				new ViewDo(
+					RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					'DESCRIPTION - ' . RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					$do_list, //do_list
+                    null, //do
+                    null, //search_string
+                    json_encode($do_list) //data_array,
+				),
+			);
+			break;
+		case 'so_attribute':
+			$view = new MapReportSoAttributeView(
+				new ViewDo(
+					RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					'DESCRIPTION - ' . RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					$do_list, //do_list
+                    null, //do
+                    null, //search_string
+                    json_encode($do_list) //data_array,
+				),
+			);
+			break;
+		case 'wt_attribute':
+			$view = new MapReportWtAttributeView(
+				new ViewDo(
+					RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					'DESCRIPTION - ' . RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					$do_list, //do_list
+                    null, //do
+                    null, //search_string
+                    json_encode($do_list) //data_array,
+				),
+			);
 			break;
 		default:
 			LogHelper::addError('Unhandled action...');
