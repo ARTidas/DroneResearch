@@ -60,6 +60,18 @@
 				),
 			);
 			break;
+		case 'h1_hypothesis':
+			$view = new MapReportH1HypothesisView(
+				new ViewDo(
+					RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					'DESCRIPTION - ' . RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					$do_list, //do_list
+                    null, //do
+                    null, //search_string
+                    json_encode($do_list) //data_array,
+				),
+			);
+			break;
 		default:
 			LogHelper::addError('Unhandled action...');
 			break;

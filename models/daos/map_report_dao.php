@@ -46,11 +46,13 @@
                         WHEN 'Rendszeresen használok drónt (pl. hobby vagy munka céljából)' THEN 'More' 
                         ELSE 'ERROR' 
                     END AS `drone_familiarity_group`,
+                    `RESPONSES`.`biggest_fear_hope` AS `biggest_fear_hope`,
                     `RESPONSES`.`S1` AS `S1`,`RESPONSES`.`S2` AS `S2`,`RESPONSES`.`S3` AS `S3`,`RESPONSES`.`S4` AS `S4`,
                     `RESPONSES`.`O1` AS `O1`,`RESPONSES`.`O2` AS `O2`,`RESPONSES`.`O3` AS `O3`,`RESPONSES`.`O4` AS `O4`,
                     `RESPONSES`.`W1` AS `W1`,`RESPONSES`.`W2` AS `W2`,`RESPONSES`.`W3` AS `W3`,`RESPONSES`.`W4` AS `W4`,
                     `RESPONSES`.`T1` AS `T1`,`RESPONSES`.`T2` AS `T2`,`RESPONSES`.`T3` AS `T3`,`RESPONSES`.`T4` AS `T4`,
-                    `RESPONSES`.`biggest_fear_hope` AS `biggest_fear_hope`
+                    (`RESPONSES`.`S1` + `RESPONSES`.`S2` + `RESPONSES`.`S3` + `RESPONSES`.`S4` + `RESPONSES`.`O1` + `RESPONSES`.`O2` + `RESPONSES`.`O3` + `RESPONSES`.`O4`) / 8 AS `SO_Attitude`,
+                    (`RESPONSES`.`W1` + `RESPONSES`.`W2` + `RESPONSES`.`W3` + `RESPONSES`.`W4` + `RESPONSES`.`T1` + `RESPONSES`.`T2` + `RESPONSES`.`T3` + `RESPONSES`.`T4`) / 8 AS `WT_Attitude` 
                 FROM 
                     `02773_research`.`form_responses_drone_society` `RESPONSES` 
                     LEFT JOIN `02773_research`.`geo_hungary_postal_codes_aggregated` `GEO_SETTLEMENTS`

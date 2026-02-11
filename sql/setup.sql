@@ -829,3 +829,35 @@ WHERE
 	`RESPONSES`.`age` > 17 AND
   `GEO_SETTLEMENTS`.`postal_code` IS NULL
 ;
+
+
+
+-- * ****************************************************
+-- * *** H1 hypothesis **********************************
+-- * ****************************************************
+SELECT
+	CASE `RESPONSES`.`drone_familiarity` 
+		WHEN 'Soha nem találkoztam / nem foglalkoztam velük' THEN 'Less' 
+		WHEN 'Láttam már, vagy hallottam róluk a médiában / környezetemben' THEN 'Less' 
+		WHEN 'Kezeltem már drónt rövidebb ideig (pl. ismerősnél)' THEN 'More' 
+		WHEN 'Rendszeresen használok drónt (pl. hobby vagy munka céljából)' THEN 'More' 
+		ELSE 'ERROR' 
+	END AS `drone_familiarity_group`,
+    ROUND((
+		`RESPONSES`.`S1` + `RESPONSES`.`S2` + `RESPONSES`.`S3` + `RESPONSES`.`S4` +
+        `RESPONSES`.`O1` + `RESPONSES`.`O2` + `RESPONSES`.`O3` + `RESPONSES`.`O4`
+	) / 8, 4) AS 'SO_Attitude',
+    ROUND((
+		`RESPONSES`.`W1` + `RESPONSES`.`W2` + `RESPONSES`.`W3` + `RESPONSES`.`W4` +
+        `RESPONSES`.`T1` + `RESPONSES`.`T2` + `RESPONSES`.`T3` + `RESPONSES`.`T4`
+	) / 8, 4) AS 'WT_Attitude'
+FROM 
+	`02773_research`.`form_responses_drone_society` `RESPONSES` 
+	LEFT JOIN `02773_research`.`geo_hungary_postal_codes_aggregated` `GEO_SETTLEMENTS`
+		ON `RESPONSES`.`postal_code` = `GEO_SETTLEMENTS`.`postal_code`
+WHERE
+	`RESPONSES`.`postal_code` NOT IN ('1040 Wien','07634','Külföld') AND 
+	`RESPONSES`.`gender` NOT IN ('Húsos fagyi','') AND 
+	`RESPONSES`.`postal_code` > 0 AND 
+	`RESPONSES`.`age` > 17
+;

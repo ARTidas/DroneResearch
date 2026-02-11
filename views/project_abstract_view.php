@@ -65,6 +65,7 @@
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map_report/swot">SWOT</a>
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map_report/so_attribute">SO_Attribute</a>
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map_report/wt_attribute">WT_Attribute</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/h1_hypothesis">H1 hypothesis</a>
                             </div>
                         </div>
 

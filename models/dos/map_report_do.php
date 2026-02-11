@@ -36,6 +36,8 @@
         public $T2;
         public $T3;
         public $T4;
+        public $SO_Attitude;
+        public $WT_Attitude;
 
     }
 
