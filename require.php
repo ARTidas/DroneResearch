@@ -86,6 +86,9 @@
     require(RequestHelper::$file_root . '/views/map_report_so_attribute_view.php');
     require(RequestHelper::$file_root . '/views/map_report_wt_attribute_view.php');
     require(RequestHelper::$file_root . '/views/map_report_h1_hypothesis_view.php');
+    require(RequestHelper::$file_root . '/views/map_report_h2_hypothesis_view.php');
+    require(RequestHelper::$file_root . '/views/map_report_h3_hypothesis_view.php');
+    require(RequestHelper::$file_root . '/views/map_report_h4_hypothesis_view.php');
     require(RequestHelper::$file_root . '/views/map_list_view.php');
     require(RequestHelper::$file_root . '/views/map_v2_list_view.php');
     require(RequestHelper::$file_root . '/views/map_all_settlements_list_view.php');

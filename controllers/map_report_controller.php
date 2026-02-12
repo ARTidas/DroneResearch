@@ -72,6 +72,42 @@
 				),
 			);
 			break;
+		case 'h2_hypothesis':
+			$view = new MapReportH2HypothesisView(
+				new ViewDo(
+					RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					'DESCRIPTION - ' . RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					$do_list, //do_list
+                    null, //do
+                    null, //search_string
+                    json_encode($do_list) //data_array,
+				),
+			);
+			break;
+		case 'h3_hypothesis':
+			$view = new MapReportH3HypothesisView(
+				new ViewDo(
+					RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					'DESCRIPTION - ' . RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					$do_list, //do_list
+                    null, //do
+                    null, //search_string
+                    json_encode($do_list) //data_array,
+				),
+			);
+			break;
+		case 'h4_hypothesis':
+			$view = new MapReportH4HypothesisView(
+				new ViewDo(
+					RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					'DESCRIPTION - ' . RequestHelper::$project_name . ' > ' . RequestHelper::$actor_name . ' > ' . RequestHelper::$actor_action,
+					$do_list, //do_list
+                    null, //do
+                    null, //search_string
+                    json_encode($do_list) //data_array,
+				),
+			);
+			break;
 		default:
 			LogHelper::addError('Unhandled action...');
 			break;

@@ -861,3 +861,8 @@ WHERE
 	`RESPONSES`.`postal_code` > 0 AND 
 	`RESPONSES`.`age` > 17
 ;
+
+-- * ****************************************************
+-- * *** H4 hypothesis **********************************
+-- * ****************************************************
+SELECT W1, SO_Attitude FROM 02773_research.drone_society;

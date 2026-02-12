@@ -66,6 +66,9 @@
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map_report/so_attribute">SO_Attribute</a>
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map_report/wt_attribute">WT_Attribute</a>
                                 <a href="<?php print(RequestHelper::$url_root); ?>/map_report/h1_hypothesis">H1 hypothesis</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/h2_hypothesis">H2 hypothesis</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/h3_hypothesis">H3 hypothesis</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/map_report/h4_hypothesis">H4 hypothesis</a>
                             </div>
                         </div>
 
@@ -89,7 +92,8 @@
                         <div>
                             <button>JASP analysis</button>
                             <div>
-                                <a href="<?php print(RequestHelper::$url_root); ?>/cdn/analysis/DronMegiteles_202511131820.html">Analysis - 2025-11-31 18:20</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/cdn/analysis/DronMegiteles_202511131820.html">JASP Analysis - 2025-11-31 18:20</a>
+                                <a href="<?php print(RequestHelper::$url_root); ?>/cdn/analysis/DroneSociety_202602111347.htm">SPSS Analysis - 2026-02-11 13:47</a>
                             </div>
                         </div>
 
