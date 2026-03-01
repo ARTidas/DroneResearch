@@ -3,7 +3,7 @@
  * Visualizes H2 Hypothesis: "Women perceive drones as a greater risk (Lower Attitude) than men."
  * - Default Map: Clean (CartoDB)
  * - Markers: Gender (Blue = Male, Pink = Female)
- * - Voronoi: SO_Attitude (Red->Green Gradient)
+ * - Voronoi: T1 (Red->Green Gradient)
  */
 
 function initializeMap(data) {
@@ -64,7 +64,7 @@ function initializeMap(data) {
     var groupFemale = [];     
 
     data.forEach(function(row) {
-        var attitude = parseFloat(row.SO_Attitude);
+        var attitude = parseFloat(row.T1);
         // Ensure we handle case variations (e.g., "Male", "male", "Man")
         var rawGender = (row.gender || row.Gender || "").trim(); 
         var gender = normalizeGender(rawGender); 

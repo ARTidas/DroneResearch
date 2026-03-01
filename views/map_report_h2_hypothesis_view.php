@@ -28,7 +28,7 @@
                     H2 hypothesis: "Women perceive drones as a greater risk to their privacy than men."
                 </h1>
                 <h2>
-                    "SO_Attitude" value vs. "Gender" group
+                    "T1" question value vs. "Gender" group
                 </h2>
                 
                 <div id="map_full"></div>
