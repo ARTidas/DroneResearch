@@ -10,7 +10,11 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{geometry}
-\usepackage{mathptmx}
+\usepackage{mathptmx} %Closest I can get to Times New Roman...
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tabulary}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
 \geometry{a4paper, margin=2.5cm, left=3cm}
 
 %-----------------------------------------------------------------
@@ -27,7 +31,7 @@
 
 %-----------------------------------------------------------------
 \begin{titlepage}
-\centering
+	\centering
 	{\Large
 		{University of Tokaj  \\ Lorántffy Institute}
 	\par}
@@ -43,24 +47,16 @@
 	\par}
 
 	\vspace{8cm}
-	\begin{minipage}{0.45\textwidth}
-	        \begin{flushleft}
-	            {Consultant:} \\ %
-	            \textbf{Dr. István Takács\footnote{Department of Economics and Enterprise Development, Lorántffy Institute, University of Tokaj, Hungary, \url{https://orcid.org/0009-0002-0527-5102}}} \\ %
-	            Associate Professor %
-	        \end{flushleft}
-	    \end{minipage}
-	    \hfill
-	    \begin{minipage}{0.45\textwidth}
-	        \begin{flushright}
-	            {Author:} \\ % 
-	            \textbf{Zoltán Veres\footnote{Department of Economics and Enterprise Development, Lorántffy Institute, University of Tokaj, Hungary, \url{https://orcid.org/0009-0009-2902-6224}}} \\ %
-	            Economist Major %
-	        \end{flushright}
-	    \end{minipage}
+	\begin{tabular}{K{6cm}K{6cm}}
+	Consultant: & Author: \\
+	%\textbf{Dr. István Takács\footnote{Department of Economics and Enterprise Development, Lorántffy Institute, University of Tokaj, Hungary, \url{https://orcid.org/0009-0002-0527-5102}}} &
+	%\textbf{Zoltán Veres\footnote{Department of Economics and Enterprise Development, Lorántffy Institute, University of Tokaj, Hungary, \url{https://orcid.org/0009-0009-2902-6224}}}  \\
+	\textbf{Dr. István Takács} & \textbf{Zoltán Veres} \\
+	Associate Professor & Economist Major
+	\end{tabular}
 
    	 \vfill
-    {\large {2026} \par}
+	 {\large {2026} \par}
 \end{titlepage}
 %-----------------------------------------------------------------
 
