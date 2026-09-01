@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'drone_age_references.blg'
+[168] biber-MSWIN64:342> INFO - === 
+[214] Biber.pm:421> INFO - Reading 'drone_age_references.bcf'
+[329] Biber.pm:1002> INFO - Found 1 citekeys in bib section 0
+[344] Biber.pm:4487> INFO - Processing section 0
+[356] Biber.pm:4678> INFO - Looking for bibtex file 'drone_age_references.bib' for section 0
+[439] bibtex.pm:1713> INFO - LaTeX decoding ...
+[506] bibtex.pm:1519> INFO - Found BibTeX data source 'drone_age_references.bib'
+[555] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[555] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[556] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[556] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[557] bbl.pm:676> INFO - Writing 'drone_age_references.bbl' with encoding 'UTF-8'
+[558] bbl.pm:779> INFO - Output to drone_age_references.bbl
+[558] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\Admin\AppData\Local\Temp\biber_tmp_ruoi\264bf99d36fc2336eeb92f684d3b2b66_15748.utf8, line 5, warning: 95 characters of junk seen at toplevel
+[558] Biber.pm:134> INFO - WARNINGS: 1

@@ -1,3 +1,7 @@
+\documentclass{article}
+\usepackage{filecontents}
+\begin{filecontents*}{drone_age_references.bib}
+
 @article{Amanda2025,
   author = {Amanda, Fistarika D. and Nurmasari, Nuraini D.},
   title = {Market Segmentation Analysis Based on Demographic and Psychographic Factors of Potential Customers in The Sucean Bag Business},
@@ -69,14 +73,14 @@
 }
 
 @article{Emimi2023,
-  author = {Emimi, Mohamed and Khaleel, Mohamed and Alkrash, Abobakr},
-  title = {The Current Opportunities and Challenges in Drone Technology},
-  journal = {International Journal of Electrical Engineering and Sustainability (IJEES)},
-  volume = {1},
-  number = {3},
-  pages = {74--89},
-  year = {2023},
-  url = {https://ijees.org/index.php/ijees/article/download/47/23}
+	  author = {Emimi, Mohamed and Khaleel, Mohamed and Alkrash, Abobakr},
+	  title = {The Current Opportunities and Challenges in Drone Technology},
+	  journal = {International Journal of Electrical Engineering and Sustainability (IJEES)},
+	  volume = {1},
+	  number = {3},
+	  pages = {74--89},
+	  year = {2023},
+	  url = {https://ijees.org/index.php/ijees/article/download/47/23}
 }
 
 @article{Feng2018,
@@ -460,3 +464,14 @@
   year = {1999},
   doi = {10.1029/1999RS900062}
 }
+
+
+
+
+\end{filecontents*}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{\jobname.bib}
+\begin{document}
+Hello\cite{Viviana2022}.
+\printbibliography
+\end{document}
